@@ -109,6 +109,8 @@
 
 # 02 - Design a compute solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/))
 
+![whiteboard](/whiteboards/02-compute.png)
+
 ## Virtual Machines ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/3-design-for-azure-virtual-machine-solutions))
 
 53. What could be reasons to choose for Virtual Machines instead of PaaS services?
@@ -119,17 +121,23 @@
 58. I need to set up a Linux server with an Apache web server, a MySQL Database and PHP installed already on it. What are my options?
 59. Why should I consider creating my own disk images?
 
+![whiteboard](/whiteboards/02-vm.png)
+
 ## Virtual Machine Scale Sets ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/3-design-for-azure-virtual-machine-solutions))
 
 60. What are Virtual Machine Scale Sets?
 61. My VM Scale Set needs high availability. What are my options?
 62. I need to deploy my application to VM Scale Set. What are my options?
 
+![whiteboard](/whiteboards/02-vmss.png)
+
 ## Azure Batch ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/4-design-for-azure-batch-solutions))
 
 63. What is Azure Batch?
 64. What are some use cases to consider Azure Batch?
 65. What is the difference between a batch Pool, Node and Job?
+
+![whiteboard](/whiteboards/02-batch.png)
 
 ## Azure App Service ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/5-design-for-azure-app-services-solutions))
 
@@ -139,6 +147,8 @@
 69. I want to run a web app implemented in Go (Golang) in Azure App Service but find out that this language is not supported. What are my options?
 70. What are WebJobs? Why would I use these or should I use something different?
 
+![whiteboard](/whiteboards/02-app-service.png)
+
 ## Container Instances ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/6-design-for-azure-container-instances-solutions))
 
 71. What are Azure Container Instances and why should I use it?
@@ -146,6 +156,8 @@
 73. What are multi-container groups?
 74. Why should I consider containers instead of Virtual Machines? (isolation, operating system, deployment, persistent storage, fault tolerance)
 75. What is a Virtual Kubelet?
+
+![whiteboard](/whiteboards/02-container-instances.png)
 
 ## Azure Kubernetes ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/7-design-for-azure-kubernetes-solutions))
 
@@ -160,6 +172,8 @@
 84. Can my application running on AKS connect to on-premise resources?
 85. I'm concerned about vulnerabilities and outdated base images. What can I do about this?
 86. Can I deploy multiple AKS clusters across non-paired regions?
+
+![whiteboard](/whiteboards/02-kubernetes.png)
 
 ## Azure Functions / Logic Apps ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/8-design-for-azure-functions-solutions))
 
@@ -532,3 +546,4 @@
 
 301. Why would you choose Azure Site Recovery over another (3rd-party) solution?
 302. Why would you combine Azure Site Recovery with Azure Backup?
+

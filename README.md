@@ -32,6 +32,8 @@
 8. How would you organize your management groups?
 9. How do you protect your management groups so that not everyone can create/update them?
 
+![whiteboard](/whiteboards/01-management-groups.png)
+
 ## Subscriptions ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/4-design-for-subscriptions))
 
 10. What is an Azure Subscription?
@@ -44,6 +46,8 @@
 17. We want to enforce common policies and role assignments across many subscriptions. What should we do?
 18. My developers want to setup sandboxes so they can experiment, but we want to isolate them from the production environment. What should we consider?
 
+![whiteboard](/whiteboards/01-subscriptions.png)
+
 ## Resource groups ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/5-design-for-resource-groups))
 
 19. What is a resource group?
@@ -54,6 +58,8 @@
 24. Can I deploy a resource in multiple resource groups?
 25. Should I apply permissions and at what level?
 26. I don't want anyone to delete my central Azure Firewall. What can I do?
+
+![whiteboard](/whiteboards/01-resource-groups.png)
 
 ## Resource tags? ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/6-design-for-resource-tags))
 
@@ -67,6 +73,8 @@
 34. Are there resources which do not support tagging?
 35. What tags will be required for all resources based on centralized IT policy?
 
+![whiteboard](/whiteboards/01-resource-tags.png)
+
 ## Azure Policy ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/7-design-for-azure-policy))
 
 36. What is an Azure Policy?
@@ -75,6 +83,8 @@
 39. When are Azure Policies evaluated?
 40. What should happen when the resource is not compliant against the policy? What are my options?
 41. Can I automatically remediate the resource to become compliant?
+
+![whiteboard](/whiteboards/01-policy.png)
 
 ## RBAC (Role Based Access Control) ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/8-design-for-role-based-access-control))
 
@@ -87,11 +97,15 @@
 48. Can you assign a role to a non-user? (aka service account?)
 49. How does Azure Policy differ from RBAC?
 
+![whiteboard](/whiteboards/01-rbac.png)
+
 ## Azure Blueprints ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/9-design-for-azure-blueprints))
 
 50. What is an Azure Blueprint and why would I consider this?
 51. What elements are part of an Azure Blueprint?
 52. How do we enforce compliance?
+
+![whiteboard](/whiteboards/01-blueprints.png)
 
 # 02 - Compute ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/))
 
@@ -518,4 +532,3 @@
 
 301. Why would you choose Azure Site Recovery over another (3rd-party) solution?
 302. Why would you combine Azure Site Recovery with Azure Backup?
-

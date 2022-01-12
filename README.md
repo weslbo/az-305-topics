@@ -1,9 +1,17 @@
-<style>
-    img[alt='whiteboard'] {
-    max-width:  400px;
-    display: block;
-}
-</style>
+# AZ-305 Discussion Topics
+
+## Table of contents
+
+- [01 - Design a governance solution](#01---design-a-governance-solution-learn-module)
+- [02 - Design a compute solution](#02---design-a-compute-solution-learn-module)
+- [03 - Design a non-relational data storage solution](#03---design-a-non-relational-data-storage-solution-learn-module)
+- [04 - Design a data storage solution for relational data](#04---design-a-data-storage-solution-for-relational-data-learn-module)
+- [05 - Design a data integration solution](#05---design-a-data-integration-solution-learn-module)
+- [06 - Design an application architecture solution](#06---design-an-application-architecture-solution-learn-module)
+- [07 - Design Authentication and Authorization Solutions](#07---design-authentication-and-authorization-solutions-learn-module)
+- [08 - Design a solution to log and monitor Azure resources](#08---design-a-solution-to-log-and-monitor-azure-resources-learn-module)
+- [09 - Design a network infrastructure solution](#09---design-a-network-infrastructure-solution-learn-module)
+- [10 - Design a business continuity solution](#10---design-a-business-continuity-solution-learn-module)
 
 # 01 - Design a governance solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-governance/2-design-for-governance))
 
@@ -412,7 +420,7 @@
 244. What is Azure Data Explorer?
 245. What do you pay for?
 
-# 09 - Design a network infrastructure  solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/))
+# 09 - Design a network infrastructure solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/))
 
 ## Recommend a network architecture solution based on workload requirements ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/2-recommend-network-architecture-solution-based-workload-requirements))
 

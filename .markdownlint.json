@@ -1,0 +1,10 @@
+{
+    "MD029": false,
+    "MD041": false,
+    "MD013": false,
+    "MD033": {
+        "allowed_elements": [
+            "style", "H1"
+        ]
+    }
+}

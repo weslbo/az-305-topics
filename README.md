@@ -2,8 +2,8 @@
 
 ## Table of contents
 
-- [01 - Governance](#01---governance-learn-module)
-- [02 - Compute](#02---compute-learn-module)
+- [01 - Design a governance solution](#01---design-a-governance-solution-learn-module)
+- [02 - Design a compute solution](#02---design-a-compute-solution-learn-module)
 - [03 - Design a non-relational data storage solution](#03---design-a-non-relational-data-storage-solution-learn-module)
 - [04 - Design a data storage solution for relational data](#04---design-a-data-storage-solution-for-relational-data-learn-module)
 - [05 - Design a data integration solution](#05---design-a-data-integration-solution-learn-module)
@@ -13,7 +13,7 @@
 - [09 - Design a network infrastructure solution](#09---design-a-network-infrastructure-solution-learn-module)
 - [10 - Design a business continuity solution](#10---design-a-business-continuity-solution-learn-module)
 
-# 01 - Governance ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-governance/2-design-for-governance))
+# 01 - Design a governance solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-governance/2-design-for-governance))
 
 ## Governance ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/2-design-for-governance))
 
@@ -107,7 +107,7 @@
 
 ![whiteboard](/whiteboards/01-blueprints.png)
 
-# 02 - Compute ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/))
+# 02 - Design a compute solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/))
 
 ## Virtual Machines ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/3-design-for-azure-virtual-machine-solutions))
 

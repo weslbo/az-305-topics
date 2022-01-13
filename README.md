@@ -12,6 +12,7 @@
 - [08 - Design a solution to log and monitor Azure resources](#08---design-a-solution-to-log-and-monitor-azure-resources-learn-module)
 - [09 - Design a network infrastructure solution](#09---design-a-network-infrastructure-solution-learn-module)
 - [10 - Design a business continuity solution](#10---design-a-business-continuity-solution-learn-module)
+- [11 - Design a migration solution](#11---design-a-migration-solution-learn-module)
 
 # 01 - Design a governance solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-governance/2-design-for-governance))
 
@@ -566,4 +567,17 @@
 
 302. Why would you choose Azure Site Recovery over another (3rd-party) solution?
 303. Why would you combine Azure Site Recovery with Azure Backup?
+
+# 11 - Design a migration solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-migrations/))
+
+## Evaluate migration with the Cloud Adoption Framework ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/2-evaluate-migration-cloud-adoption-framework))
+
+304. Microsoft Cloud Adoption Framework for Azure?
+305. What kind of activities should be performed during the assesment phase?
+
+## Describe the Azure Migration Framework ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/3-describe-azure-migration-framework))
+
+306. Which strategy should you take when considering a migration?
+
+## Assess your workloads ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/4-assess-your-premises-workloads))
 

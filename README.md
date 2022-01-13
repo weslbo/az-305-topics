@@ -17,13 +17,15 @@
 
 ## Governance ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/2-design-for-governance))
 
+![whiteboard](/whiteboards/01-governance.png)
+
 1. What is governance and why is it important?
 2. How can you organize your resources?
 3. Where should I apply permissions for people to manage resources?
 
-![whiteboard](/whiteboards/01-governance.png)
-
 ## Management Groups ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/3-design-for-management-groups))
+
+![whiteboard](/whiteboards/01-management-groups.png)
 
 4. What are management groups and why should you consider implementing them?
 5. How many levels can management groups support?
@@ -32,9 +34,9 @@
 8. How would you organize your management groups?
 9. How do you protect your management groups so that not everyone can create/update them?
 
-![whiteboard](/whiteboards/01-management-groups.png)
-
 ## Subscriptions ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/4-design-for-subscriptions))
+
+![whiteboard](/whiteboards/01-subscriptions.png)
 
 10. What is an Azure Subscription?
 11. How many subscriptions do you need across your organization?
@@ -46,9 +48,9 @@
 17. We want to enforce common policies and role assignments across many subscriptions. What should we do?
 18. My developers want to setup sandboxes so they can experiment, but we want to isolate them from the production environment. What should we consider?
 
-![whiteboard](/whiteboards/01-subscriptions.png)
-
 ## Resource groups ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/5-design-for-resource-groups))
+
+![whiteboard](/whiteboards/01-resource-groups.png)
 
 19. What is a resource group?
 20. How should I group resources? (by type, location, workload, billing, department, lifecycle, ...)
@@ -59,9 +61,9 @@
 25. Should I apply permissions and at what level?
 26. I don't want anyone to delete my central Azure Firewall. What can I do?
 
-![whiteboard](/whiteboards/01-resource-groups.png)
-
 ## Resource tags? ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/6-design-for-resource-tags))
+
+![whiteboard](/whiteboards/01-resource-tags.png)
 
 27. What's the purpose of resource tags?
 28. How many tags can I apply to a resource?
@@ -73,9 +75,9 @@
 34. Are there resources which do not support tagging?
 35. What tags will be required for all resources based on centralized IT policy?
 
-![whiteboard](/whiteboards/01-resource-tags.png)
-
 ## Azure Policy ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/7-design-for-azure-policy))
+
+![whiteboard](/whiteboards/01-policy.png)
 
 36. What is an Azure Policy?
 37. At what level should you apply an Azure Policy?
@@ -84,9 +86,9 @@
 40. What should happen when the resource is not compliant against the policy? What are my options?
 41. Can I automatically remediate the resource to become compliant?
 
-![whiteboard](/whiteboards/01-policy.png)
-
 ## RBAC (Role Based Access Control) ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/8-design-for-role-based-access-control))
+
+![whiteboard](/whiteboards/01-rbac.png)
 
 42. Who should I give access, and at what level?
 43. Should I assign roles to users or groups?
@@ -97,21 +99,21 @@
 48. Can you assign a role to a non-user? (aka service account?)
 49. How does Azure Policy differ from RBAC?
 
-![whiteboard](/whiteboards/01-rbac.png)
-
 ## Azure Blueprints ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/9-design-for-azure-blueprints))
+
+![whiteboard](/whiteboards/01-blueprints.png)
 
 50. What is an Azure Blueprint and why would I consider this?
 51. What elements are part of an Azure Blueprint?
 52. How do we enforce compliance?
-
-![whiteboard](/whiteboards/01-blueprints.png)
 
 # 02 - Design a compute solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/))
 
 ![whiteboard](/whiteboards/02-compute.png)
 
 ## Virtual Machines ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/3-design-for-azure-virtual-machine-solutions))
+
+![whiteboard](/whiteboards/02-vm.png)
 
 53. What could be reasons to choose for Virtual Machines instead of PaaS services?
 54. Who is responsible for your VM? Microsoft or the customer?
@@ -121,25 +123,25 @@
 58. I need to set up a Linux server with an Apache web server, a MySQL Database and PHP installed already on it. What are my options?
 59. Why should I consider creating my own disk images?
 
-![whiteboard](/whiteboards/02-vm.png)
-
 ## Virtual Machine Scale Sets ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/3-design-for-azure-virtual-machine-solutions))
+
+![whiteboard](/whiteboards/02-vmss.png)
 
 60. What are Virtual Machine Scale Sets?
 61. My VM Scale Set needs high availability. What are my options?
 62. I need to deploy my application to VM Scale Set. What are my options?
 
-![whiteboard](/whiteboards/02-vmss.png)
-
 ## Azure Batch ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/4-design-for-azure-batch-solutions))
+
+![whiteboard](/whiteboards/02-batch.png)
 
 63. What is Azure Batch?
 64. What are some use cases to consider Azure Batch?
 65. What is the difference between a batch Pool, Node and Job?
 
-![whiteboard](/whiteboards/02-batch.png)
-
 ## Azure App Service ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/5-design-for-azure-app-services-solutions))
+
+![whiteboard](/whiteboards/02-app-service.png)
 
 66. What is it that I pay for with an Azure App Service?
 67. Why would I consider deployment slots?
@@ -147,9 +149,9 @@
 69. I want to run a web app implemented in Go (Golang) in Azure App Service but find out that this language is not supported. What are my options?
 70. What are WebJobs? Why would I use these or should I use something different?
 
-![whiteboard](/whiteboards/02-app-service.png)
-
 ## Container Instances ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/6-design-for-azure-container-instances-solutions))
+
+![whiteboard](/whiteboards/02-container-instances.png)
 
 71. What are Azure Container Instances and why should I use it?
 72. When/Why should I NOT use it?
@@ -157,9 +159,9 @@
 74. Why should I consider containers instead of Virtual Machines? (isolation, operating system, deployment, persistent storage, fault tolerance)
 75. What is a Virtual Kubelet?
 
-![whiteboard](/whiteboards/02-container-instances.png)
-
 ## Azure Kubernetes ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/7-design-for-azure-kubernetes-solutions))
+
+![whiteboard](/whiteboards/02-kubernetes.png)
 
 76. What is Azure Kubernetes?
 77. Who needs to manage the Kubernetes cluster?
@@ -173,9 +175,9 @@
 85. I'm concerned about vulnerabilities and outdated base images. What can I do about this?
 86. Can I deploy multiple AKS clusters across non-paired regions?
 
-![whiteboard](/whiteboards/02-kubernetes.png)
-
 ## Azure Functions / Logic Apps ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/8-design-for-azure-functions-solutions))
+
+![whiteboard](/whiteboards/02-functions.png)
 
 87. Why would I consider Azure Functions? Do you have some scenarios?
 88. What do I pay for when using Serverless Functions?
@@ -184,9 +186,9 @@
 91. What are the different hosting plans available for Azure Functions and why should I choose for one over the other?
 92. Why would I consider to use a Premium plan for Azure Functions?
 
-![whiteboard](/whiteboards/02-functions.png)
-
 ## Logic Apps ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/9-design-for-logic-app-solutions))
+
+![whiteboard](/whiteboards/02-logic-apps.png)
 
 93. Why would I consider Logic Apps? Do you have some scenarios?
 94. My application requires some complex business rules. Should I use Logic Apps?
@@ -194,18 +196,18 @@
 96. Can I run a Logic App on a separate plan? Why would I do this?
 97. What are some differences between a Logic App and Durable Functions?
 
-![whiteboard](/whiteboards/02-logic-apps.png)
-
 # 03 - Design a non-relational data storage solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/))
 
 ## Data Storage ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/2-design-for-data-storage))
 
+![whiteboard](/whiteboards/03-data-storage.png)
+
 98. What is the difference between Structured/Unstructured/Semi-structured?
 99. What are your options for storing unstructured data in Azure? Why would you choose one over the other?
 
-![whiteboard](/whiteboards/03-data-storage.png)
-
 ## Azure Storage ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/3-design-for-azure-storage-accounts))
+
+![whiteboard](/whiteboards/03-azure-storage.png)
 
 100. When should you NOT choose a Standard General Purpose V2 storage account?
 101. How many storage accounts do you actually need? What should you consider?
@@ -220,9 +222,9 @@
 110. What is the difference between time-based retention policies and legal hold policies?
 111. Which data sets and policies would be most helpful in your organization?
 
-![whiteboard](/whiteboards/03-azure-storage.png)
-
 ## Azure Files ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/6-design-for-azure-files))
+
+![whiteboard](/whiteboards/03-azure-files.png)
 
 112. When would you use Azure Files instead of Azure Blob storage?
 113. Which protocols are supported with Azure Files?
@@ -230,9 +232,9 @@
 115. Which file storage tiers exists and which one would you choose in the following scenarios
 116. Why would I consider Azure NetApp files?
 
-![whiteboard](/whiteboards/03-azure-files.png)
-
 ## Azure Disks ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/7-design-for-azure-disk-solutions))
+
+![whiteboard](/whiteboards/03-azure-disks.png)
 
 117. Azure offers Ultra-disk, Premium SSD, Standard SSD and Standard HDD disk types. What could be a valid scenario to choose one over the other?
 118. Why would I consider to change disk caching from None to ReadOnly or Read/Write? How should I configure these when implementing a SQL Server Database?
@@ -241,20 +243,20 @@
 121. Can you share multiple disks across VM's?
 122. How can you improve performance by implementing multiple disks?
 
-![whiteboard](/whiteboards/03-azure-disks.png)
-
 ## Storage security ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/8-design-for-storage-security))
+
+![whiteboard](/whiteboards/03-storage-security.png)
 
 123. Why should I never hand out the Azure Storage Account Key?
 124. What is a Shared Access Signature and at which level can I create it?
 125. Should I protect my storage account at the network level? What are my options?
 126. Can I bring my own encryption key? How granular can I implement this?
 
-![whiteboard](/whiteboards/03-storage-security.png)
-
 # 04 - Design a data storage solution for relational data ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data))
 
 ## Azure SQL Database ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data/))
+
+![whiteboard](/whiteboards/04-azure-sql.png)
 
 127. Azure SQL Database can be hosted in many ways. What could be my decision criteria?
 128. What are elastic pools?

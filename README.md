@@ -19,43 +19,43 @@
 
 ![whiteboard](/whiteboards/01-governance.png)
 
-1. What is governance and why is it important?
-2. How can you organize your resources?
-3. Where should I apply permissions for people to manage resources?
+1. What is governance and why is it important? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/methodology)
+2. How can you organize your resources? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/guides/standard/)
+3. Where should I apply permissions for people to manage resources? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles)
 
 ## Management Groups ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/3-design-for-management-groups))
 
 ![whiteboard](/whiteboards/01-management-groups.png)
 
-4. What are management groups and why should you consider implementing them?
-5. How many levels can management groups support?
-6. Should you go for a deeply nested hierarchy, or for a reasonably flat one? Why?
-7. Why should you consider a top-level management group?
-8. How would you organize your management groups?
-9. How do you protect your management groups so that not everyone can create/update them?
+4. What are management groups and why should you consider implementing them? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
+5. How many levels can management groups support? [[doc]](https://docs.microsoft.com/en-us/azure/governance/management-groups/overview)
+6. Should you go for a deeply nested hierarchy, or for a reasonably flat one? Why? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
+7. Why should you consider a top-level management group? [[doc]](https://docs.microsoft.com/en-us/learn/modules/design-governance/3-design-for-management-groups)
+8. How would you organize your management groups? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#management-groups-in-the-azure-landing-zone-accelerator)
+9. How do you protect your management groups so that not everyone can create/update them? [[doc]](https://docs.microsoft.com/en-us/azure/governance/management-groups/overview#management-group-access)
 
 ## Subscriptions ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/4-design-for-subscriptions))
 
 ![whiteboard](/whiteboards/01-subscriptions.png)
 
-10. What is an Azure Subscription?
-11. How many subscriptions do you need across your organization?
+10. What is an Azure Subscription? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions)
+11. How many subscriptions do you need across your organization? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/scale-subscriptions)
 12. Who is responsible for paying the subscription?
-13. Which offer do I choose for my subscription?
-14. Are there any scale limits to my subscriptions?
+13. Which offer do I choose for my subscription? [[doc]](https://azure.microsoft.com/en-us/support/legal/offer-details/)
+14. Are there any scale limits to my subscriptions? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits)
 15. I need to deploy 30,000 VMs. How many subscriptions do I need?
-16. Should my organization go for a centralized vs decentralized approach?
-17. We want to enforce common policies and role assignments across many subscriptions. What should we do?
-18. My developers want to setup sandboxes so they can experiment, but we want to isolate them from the production environment. What should we consider?
+16. Should my organization go for a centralized vs decentralized approach? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/centralize-operations)
+17. We want to enforce common policies and role assignments across many subscriptions. What should we do? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/policy-enforcement/)
+18. My developers want to setup sandboxes so they can experiment, but we want to isolate them from the production environment. What should we consider? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
 
 ## Resource groups ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/5-design-for-resource-groups))
 
 ![whiteboard](/whiteboards/01-resource-groups.png)
 
-19. What is a resource group?
-20. How should I group resources? (by type, location, workload, billing, department, lifecycle, ...)
-21. I have a resource group in WESTEU. Can I deploy resources in NORTHEU?
-22. Can I move resources between resource groups?
+19. What is a resource group? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts)
+20. How should I group resources? (by type, location, workload, billing, department, lifecycle, ...) [[doc]](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/2-principles-of-resource-groups)
+21. I have a resource group in WESTEU. Can I deploy resources in NORTHEU? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group)
+22. Can I move resources between resource groups? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription) [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-support-resources)
 23. Can I nest resource groups?
 24. Can I deploy a resource in multiple resource groups?
 25. Should I apply permissions and at what level?
@@ -65,47 +65,47 @@
 
 ![whiteboard](/whiteboards/01-resource-tags.png)
 
-27. What's the purpose of resource tags?
-28. How many tags can I apply to a resource?
-29. If I apply a tag at the level of a resource group, will it inherit down to the individual resource?
-30. Can you come up with some examples where you could leverage tags on resources?
+27. What's the purpose of resource tags? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json)
+28. How many tags can I apply to a resource? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json)
+29. If I apply a tag at the level of a resource group, will it inherit down to the individual resource? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies)
+30. Can you come up with some examples where you could leverage tags on resources? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/resource-tagging/?toc=/azure/azure-resource-manager/management/toc.json)
 31. Will you implement a chargeback or show back accounting system?
 32. Does tagging need to represent details such regulatory compliance requirements for a resource?
-33. What can I do to enforce tagging
-34. Are there resources which do not support tagging?
-35. What tags will be required for all resources based on centralized IT policy?
+33. What can I do to enforce tagging [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies#policy-definitions)
+34. Are there resources which do not support tagging? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-support)
+35. What tags will be required for all resources based on centralized IT policy? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging)
 
 ## Azure Policy ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/7-design-for-azure-policy))
 
 ![whiteboard](/whiteboards/01-policy.png)
 
-36. What is an Azure Policy?
-37. At what level should you apply an Azure Policy?
-38. I have multiple Azure Policies to enforce. Any recommendations?
-39. When are Azure Policies evaluated?
-40. What should happen when the resource is not compliant against the policy? What are my options?
-41. Can I automatically remediate the resource to become compliant?
+36. What is an Azure Policy? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/overview)
+37. At what level should you apply an Azure Policy? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/overview#assignments)
+38. I have multiple Azure Policies to enforce. Any recommendations? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/initiative-definition-structure) [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives)
+39. When are Azure Policies evaluated? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/overview#understand-evaluation-outcomes) [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/evaluate-impact) [[doc]](https://docs.microsoft.com/en-us/learn/modules/design-governance/7-design-for-azure-policy)
+40. What should happen when the resource is not compliant against the policy? What are my options? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects)
+41. Can I automatically remediate the resource to become compliant? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/event-overview) [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/route-state-change-events) [[doc]](https://docs.microsoft.com/en-us/azure/logic-apps/policy-reference)
 
 ## RBAC (Role Based Access Control) ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/8-design-for-role-based-access-control))
 
 ![whiteboard](/whiteboards/01-rbac.png)
 
-42. Who should I give access, and at what level?
-43. Should I assign roles to users or groups?
-44. Should everyone be an owner/contributor?
-45. When should you create a custom role?
-46. What happens if roles are overlapping?
+42. Who should I give access, and at what level? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles)
+43. Should I assign roles to users or groups? [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/best-practices)
+44. Should everyone be an owner/contributor? [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/deny-assignments)
+45. When should you create a custom role? [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles) [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles#use-custom-roles)
+46. What happens if roles are overlapping? [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview#how-azure-rbac-determines-if-a-user-has-access-to-a-resource)
 47. How to allow some users to control the virtual machines in an environment but prevent them from modifying networking and other resources in the same resource group or Azure subscription?
-48. Can you assign a role to a non-user? (aka service account?)
-49. How does Azure Policy differ from RBAC?
+48. Can you assign a role to a non-user? (aka service account?) [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps)
+49. How does Azure Policy differ from RBAC? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/overview#azure-policy-and-azure-rbac)
 
 ## Azure Blueprints ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/9-design-for-azure-blueprints))
 
 ![whiteboard](/whiteboards/01-blueprints.png)
 
-50. What is an Azure Blueprint and why would I consider this?
+50. What is an Azure Blueprint and why would I consider this? [[doc]](https://docs.microsoft.com/en-us/azure/governance/blueprints/overview)
 51. What elements are part of an Azure Blueprint?
-52. How do we enforce compliance?
+52. How do we enforce compliance? [[doc]](https://docs.microsoft.com/en-us/azure/governance/blueprints/samples/)
 
 # 02 - Design a compute solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/))
 
@@ -474,8 +474,8 @@
 
 ## Recommend a network architecture solution based on workload requirements ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/2-recommend-network-architecture-solution-based-workload-requirements))
 
-247. Why would you want to create multiple virtual networks, or create multiple subnets in your VNET?
-248. Why does it matter to apply a naming convention when creating virtual networks?
+247. Why would you want to create multiple virtual networks, or create multiple subnets in your VNET? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/network-level-segmentation) [[doc]](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm)
+248. Why does it matter to apply a naming convention when creating virtual networks? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming#example-names-networking)
 249. Can you deploy resources across multiple regions in the same virtual network?
 250. How large should your virtual network's address space be?
 251. What is the difference between a network virtual appliance (NVA) like a Firewall and a NSG Network Security Group?
@@ -520,38 +520,38 @@
 
 ## Backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/2-design-recovery))
 
-276. What is the difference between RTO and RPO?
-277. What are SLA's and why does it matter? Who provides the SLA?
-278. How would you calculate the SLA?
+276. What is the difference between RTO and RPO? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/considerations/protect) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics)
+277. What are SLA's and why does it matter? Who provides the SLA? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/considerations/impact) [[doc]](https://azure.microsoft.com/en-us/support/legal/sla/)
+278. How would you calculate the SLA? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics#understand-service-level-agreements)
 279. What is MTBF and MTTR and what would be appropriate values?
-280. How do you know that a service/application does (not) reach it's SLA?
-281. Why do you need both disaster recovery and backup?
+280. How do you know that a service/application does (not) reach it's SLA? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/framework/devops/checklist) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/monitoring/enterprise-monitoring) [[doc]](https://docs.microsoft.com/en-us/azure/azure-monitor/app/availability-overview)
+281. Why do you need both disaster recovery and backup? [[doc]](https://docs.microsoft.com/en-us/learn/modules/describe-high-availability-disaster-recovery-strategies/3-explore-high-availability-disaster-recovery-options)
 282. Why would you test your disaster recovery?
 
 ## Azure Backup ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/3-design-for-azure-backup))
 
-283. What can you backup with Azure Backup?
-284. What do you pay for?
-285. How much data can you store and for how long?
+283. What can you backup with Azure Backup? [[doc]](https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix)
+284. What do you pay for? [[doc]](https://azure.microsoft.com/en-us/pricing/details/backup/)
+285. How much data can you store and for how long? [[doc]](https://docs.microsoft.com/en-us/azure/backup/backup-azure-vm-backup-faq) [[doc]](https://docs.microsoft.com/en-us/azure/backup/archive-tier-support)
 286. What does it mean to have application consistent backups?
-287. Can you backup SQL databases with it?
-288. Does it store backups also across regions? Only the region pair or other regions?
-289. Why is it important to protect your Azure Backup? How can you accomplish this?
+287. Can you backup SQL databases with it? [[doc]](https://docs.microsoft.com/en-us/azure/backup/backup-azure-sql-database)
+288. Does it store backups also across regions? Only the region pair or other regions? [[doc]](https://docs.microsoft.com/en-us/azure/backup/guidance-best-practices)
+289. Why is it important to protect your Azure Backup? How can you accomplish this? [[doc]](https://docs.microsoft.com/en-us/azure/backup/guidance-best-practices#security-considerations)
 
 ## Azure blob backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/4-design-for-azure-blob-backup-recovery))
 
-290. What are the features you can use with Azure Blob storage to be able to recover data without Azure Backup?
-291. Can you perform a Point-in-time restore on Azure Blob storage?
+290. What are the features you can use with Azure Blob storage to be able to recover data without Azure Backup? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-protection-overview)
+291. Can you perform a Point-in-time restore on Azure Blob storage? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/point-in-time-restore-overview)
 292. Can you use Azure Backup to backup Azure Blob storage? Why would you use/not use this?
-293. Can you recover a deleted Azure Storage account?
-294. How many years can you configure immutable storage?
+293. Can you recover a deleted Azure Storage account? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-recover)
+294. How many years can you configure immutable storage? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview) [[doc]](https://www.rijksmuseum.nl/nl/collectie/SK-A-1699)
 
 ## Azure Files backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/5-design-for-azure-files-backup-recovery))
 
 295. What are Azure Files snapshots?
 296. How would you automate file share backups?
-297. Why should you configure alerting and reporting provided by Azure Backup?
-298. Why would you want to perform an on-demand backup of a file share if it is also scheduled?
+297. Why should you configure alerting and reporting provided by Azure Backup? [[doc]](https://docs.microsoft.com/en-us/azure/backup/monitoring-and-alerts-overview) [[doc]](https://docs.microsoft.com/en-us/azure/backup/backup-afs)
+298. Why would you want to perform an on-demand backup of a file share if it is also scheduled? [[doc]](https://docs.microsoft.com/en-us/azure/backup/manage-recovery-points)
 
 ## Azure virtual machine backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/6-design-for-azure-virtual-machine-backup-recovery))
 
@@ -559,8 +559,8 @@
 
 ## Azure SQL backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/7-design-for-azure-sql-backup-recovery))
 
-300. How does Azure SQL perform backups and what's the interval, RPO and RTO?
-301. What happens in case a region goes down? Can I restore to another region and who is responsible for this?
+300. How does Azure SQL perform backups and what's the interval, RPO and RTO? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/automated-backups-overview?tabs=single-database)
+301. What happens in case a region goes down? Can I restore to another region and who is responsible for this? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview)
 
 ## Azure Site Recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/8-design-for-azure-site-recover))
 

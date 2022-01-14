@@ -21,6 +21,9 @@ namespace code
             sb.AppendLine("# AZ-305 Discussion Topics\n");
             sb.AppendLine("## Table of contents\n");
 
+            root.modules.ForEach(m => m.units.ForEach( u => i += (u.questions == null ? 0 : u.questions.Count)));
+            sb.AppendLine($"__Total number of questions:__ {i}\n");
+
             root.modules.ForEach(m => sb.AppendLine($"- [{m.module}](#{m.module.ToLower().Replace(" ", "-")}-learn-module)"));
             sb.AppendLine();
 
@@ -33,6 +36,8 @@ namespace code
 
                 foreach (var unit in module.units)
                 {
+                    var j = 1;
+
                     sb.AppendLine($"## {unit.unit} ([Unit]({unit.link}))\n");
 
                     if (!string.IsNullOrEmpty(unit.whiteboard))
@@ -43,7 +48,7 @@ namespace code
 
                     foreach (var q in unit.questions)
                     {
-                        sb.Append($"{i++}. {q.question}");
+                        sb.Append($"{j++}. {q.question}");
 
                         if (q.links != null)
                             q.links.ForEach(link => sb.Append($" [[doc]]({link})"));

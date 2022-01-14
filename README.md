@@ -60,7 +60,7 @@
 23. Can I nest resource groups?
 24. Can I deploy a resource in multiple resource groups?
 25. Should I apply permissions and at what level?
-26. I don't want anyone to delete my central Azure Firewall. What can I do?
+26. I don't want anyone to delete my central Azure Firewall. What can I do? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json)
 
 ## Resource tags? ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/6-design-for-resource-tags))
 

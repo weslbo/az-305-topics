@@ -1,0 +1,929 @@
+---
+modules:
+  - module: 01 - Design a governance solution
+    link: https://docs.microsoft.com/en-us/learn/modules/design-governance/2-design-for-governance
+    units:
+      - unit: Governance
+        link: https://docs.microsoft.com/en-us/learn/modules/design-governance/2-design-for-governance
+        whiteboard: /whiteboards/01-governance.png
+        questions:
+          - question: What is governance and why is it important?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/methodology
+            whiteboard: /whiteboards/01-governance-importance.png
+            extra: 
+                - Who would be asking for this in your company?
+                - At which moment in time would you think about implementing governance?
+                - What if you don't implement it?
+          - question: How can you organize your resources?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/guides/standard/
+            whiteboard: /whiteboards/01-resource-organization.png
+          - question: Where should I apply permissions for people to manage resources?
+            links: 
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles
+            whiteboard: /whiteboards/01-rbac.png
+            extra:
+                - Think again about the hierarchy. Should your DBA be given permissions at the top of the management groups, or rather at the individual SQL databases?
+                - What are the pro's and con's?
+
+      - unit: Management Groups
+        link: https://docs.microsoft.com/en-us/learn/modules/design-governance/3-design-for-management-groups
+        whiteboard: /whiteboards/01-management-groups.png
+        questions:
+          - question: What are management groups and why should you consider implementing them?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups
+            whiteboard: /whiteboards/01-mg.png
+          - question: How many levels can management groups support?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/management-groups/overview
+            whiteboard: /whiteboards/01-mg-levels.png
+            extra:
+                - Does it include the tenant root level?
+          - question: Should you go for a deeply nested hierarchy, or for a reasonably flat one? Why?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups
+            whiteboard: /whiteboards/01-mg-flat-or-deep.png
+          - question: Why should you consider a top-level management group?
+            links:
+                - https://docs.microsoft.com/en-us/learn/modules/design-governance/3-design-for-management-groups
+            whiteboard: /whiteboards/01-mg-root.png
+          - question: How would you organize your management groups? 
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#management-groups-in-the-azure-landing-zone-accelerator
+            extra:
+                - By department/geography/product line/...
+          - question: How do you protect your management groups so that not everyone can create/update them? 
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/management-groups/overview#management-group-access
+            whiteboard: /whiteboards/01-mg-rbac.png
+            extra:
+                - Who can create them?
+                - Who can assign a subscription to a management group?
+                - Can I as a subscription owner move my subscription to another management group (and circumvent certain policies)?
+
+      - unit: Subscriptions
+        link: https://docs.microsoft.com/en-us/learn/modules/design-governance/4-design-for-subscriptions
+        whiteboard: /whiteboards/01-subscriptions.png
+        questions:
+          - question: What is an Azure Subscription?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions
+            whiteboard: /whiteboards/01-subscription.png
+          - question: How many subscriptions do you need across your organization?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/scale-subscriptions
+            whiteboard: /whiteboards/01-subscription-how-many.png
+            extra:
+                - Would you need one, or multiple?
+          - question: Who is responsible for paying the subscription?
+            whiteboard: /whiteboards/01-subscription-who-pays.png
+            extra:
+                - Somebody's got to pay $$$
+                - Do you have agreement with key business stakeholders and are they willing to pay for the services?
+          - question: Which offer do I choose for my subscription?
+            links:
+                - https://azure.microsoft.com/en-us/support/legal/offer-details/
+            extra:
+                - Different customers, different prices...
+          - question: Are there any scale limits to my subscriptions?
+            links:
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits
+            whiteboard: /whiteboards/01-subscription-limits.png
+            extra:
+                - Could be a reason to go for multiple subscription. Do you know which limits exists at the level of a subscription?
+          - question: I need to deploy 30,000 VMs. How many subscriptions do I need?
+            extra:
+                - Can you find the answer in the docs?
+                - What would be your advice?
+          - question: Should my organization go for a centralized vs decentralized approach?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/centralize-operations
+            whiteboard: /whiteboards/01-subscription-central-or-decentral.png
+            extra:
+                - Who will be managing these subscriptions and resources within it? 
+                - Central IT or decentralize and let the business be agile?
+                - Will you put everything under an enterprise agreement?
+          - question: We want to enforce common policies and role assignments across many subscriptions. What should we do?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/policy-enforcement/
+          - question: My developers want to setup sandboxes so they can experiment, but we want to isolate them from the production environment. What should we consider?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups
+            extra:
+                - Developers! Developers! Developers!
+                - It works on my machine!
+
+      - unit: Resource groups
+        link: https://docs.microsoft.com/en-us/learn/modules/design-governance/5-design-for-resource-groups
+        whiteboard: /whiteboards/01-resource-groups.png
+        questions:
+          - question: What is a resource group?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts
+          - question: How should I group resources? (by type, location, workload, billing, department, lifecycle, ...)
+            links:
+                - https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/2-principles-of-resource-groups
+          - question: I have a resource group in WESTEU. Can I deploy resources in NORTHEU?
+            links:
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group
+            whiteboard: /whiteboards/01-rg-location.png
+            extra:
+                - Can I prevent his?
+          - question: Can I move resources between resource groups?
+            links:
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-support-resources
+            whiteboard: /whiteboards/01-rg-move-resources.png
+            extra:
+                - In case it's not possible, what would be my approach?
+          - question: Can I nest resource groups?
+            extra:
+                - Would this make sense to you?
+          - question: Can I deploy a resource in multiple resource groups?
+            extra:
+                - for example - Azure Traffic Manager...
+          - question: Should I apply permissions and at what level?
+            whiteboard: /whiteboards/01-rbac.png
+            extra:
+                - Your DBA should get access to all SQL Databases. At which level or you going to assign RBAC?
+                - What role?
+                - Will you need a custom role?
+          - question: I don't want anyone to delete my central Azure Firewall. What can I do?
+            links: 
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json
+            extra:
+                - Deleting my Azure Firewall would make my whole environment pretty useless!
+
+      - unit: Resource tags?
+        link: https://docs.microsoft.com/en-us/learn/modules/design-governance/6-design-for-resource-tags
+        whiteboard: /whiteboards/01-resource-tags.png
+        questions:
+          - question: What's the purpose of resource tags?
+            links:
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json
+          - question: How many tags can I apply to a resource?
+            links:
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json
+            extra:
+                - What's the maximum? 
+                - Should you go for the maximum?
+          - question: If I apply a tag at the level of a resource group, will it inherit down to the individual resource?
+            links:
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies
+            whiteboard: /whiteboards/01-rg-tags-inherit.png
+            extra:
+                - In case the answer is no, what would be the recommended solution?
+          - question: Can you come up with some examples where you could leverage tags on resources?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/resource-tagging/?toc=/azure/azure-resource-manager/management/toc.json
+            whiteboard: /whiteboards/01-rg-tags-strategy.png
+            extra:
+                - functional, classification, accounting, partnership, purpose
+                - how could this fit in your company setup?
+          - question: Will you implement a chargeback or show back accounting system? 
+            extra:
+                - Will you need to associate resources with accounting information for departments, business groups, and teams in more detail than a simple subscription-level breakdown allows?
+          - question: Does tagging need to represent details such regulatory compliance requirements for a resource? 
+            extra:
+                - What about operational details such as uptime requirements, patching schedules, or security requirements?
+          - question: What can I do to enforce tagging 
+            links:
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies#policy-definitions
+            extra:
+                - eg - cost center is required!
+          - question: Are there resources which do not support tagging?
+            links:
+                - https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-support
+            extra:
+                - Can you find one in the documentation?
+          - question: What tags will be required for all resources based on centralized IT policy? 
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging
+            extra:
+                - What tags will be optional? 
+                - Are individual teams allowed to implement their own custom tagging schemes?
+
+      - unit: Azure Policy
+        link: https://docs.microsoft.com/en-us/learn/modules/design-governance/7-design-for-azure-policy
+        whiteboard: /whiteboards/01-policy.png
+        questions:
+          - question: What is an Azure Policy?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/policy/overview
+          - question: At what level should you apply an Azure Policy?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/policy/overview#assignments
+            extra:
+                - Can you apply this to an individual resource?
+          - question: I have multiple Azure Policies to enforce. Any recommendations?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/policy/concepts/initiative-definition-structure
+                - https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives
+          - question: When are Azure Policies evaluated?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/policy/overview#understand-evaluation-outcomes
+                - https://docs.microsoft.com/en-us/azure/governance/policy/concepts/evaluate-impact
+                - https://docs.microsoft.com/en-us/learn/modules/design-governance/7-design-for-azure-policy
+            extra:
+                - Timing is everything!
+          - question: What should happen when the resource is not compliant against the policy? What are my options?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects
+          - question: Can I automatically remediate the resource to become compliant?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/policy/concepts/event-overview
+                - https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/route-state-change-events
+                - https://docs.microsoft.com/en-us/azure/logic-apps/policy-reference
+            extra:
+                - What technology could I use to support the remediation?
+                - What do I need to think about?
+
+      - unit: RBAC (Role Based Access Control)
+        link: https://docs.microsoft.com/en-us/learn/modules/design-governance/8-design-for-role-based-access-control
+        whiteboard: /whiteboards/01-rbac.png
+        questions:
+          - question: Who should I give access, and at what level?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles
+            extra:
+                - Think again about the Database Administrator in your company. 
+                - Should everyone be an owner/contributor?
+          - question: Should I assign roles to users or groups?
+            links:
+                - https://docs.microsoft.com/en-us/azure/role-based-access-control/best-practices
+            extra:
+                - How would this make my life easier?
+          - question: Should everyone be an owner/contributor?
+            links:
+                - https://docs.microsoft.com/en-us/azure/role-based-access-control/deny-assignments
+            extra:
+                - Can I explicitly deny access?
+                - I don't trust my colleagues ;-)
+          - question: When should you create a custom role?
+            links:
+                - https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles#use-custom-roles
+            extra:
+                - Azure has hundreds of roles out of the box...
+          - question: What happens if roles are overlapping?
+            links:
+                - https://docs.microsoft.com/en-us/azure/role-based-access-control/overview#how-azure-rbac-determines-if-a-user-has-access-to-a-resource
+            extra:
+                - I got assigned permissions at different levels... Now what?
+          - question: How to allow some users to control the virtual machines in an environment but prevent them from modifying networking and other resources in the same resource group or Azure subscription?
+          - question: Can you assign a role to a non-user? (aka service account?)
+            links:
+                - https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps
+            extra:
+                - I want to make use of GitHub actions and automate the deployment of ARM templates...
+          - question: How does Azure Policy differ from RBAC?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/policy/overview#azure-policy-and-azure-rbac
+            extra:
+                - What's the purpose of each of these?
+
+      - unit: Azure Blueprints
+        link: https://docs.microsoft.com/en-us/learn/modules/design-governance/9-design-for-azure-blueprints
+        whiteboard: /whiteboards/01-blueprints.png
+        questions:
+          - question: What is an Azure Blueprint and why would I consider this?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/blueprints/overview
+          - question: What elements are part of an Azure Blueprint?
+            extra: 
+                - Can I / Should I include ARM templates?
+                - Are there alternatives?
+          - question: How do we enforce compliance?
+            links:
+                - https://docs.microsoft.com/en-us/azure/governance/blueprints/samples/
+
+  - module: 02 - Design a compute solution
+    link: https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/
+    whiteboard: /whiteboards/02-compute.png
+    units:
+      - unit: Virtual Machines
+        link: https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/3-design-for-azure-virtual-machine-solutions
+        whiteboard: /whiteboards/02-vm.png
+        questions:
+          - question: What could be reasons to choose for Virtual Machines instead of PaaS services?
+          - question: Who is responsible for your VM? Microsoft or the customer?
+          - question: Can you run any VM in any region? What about pricing?
+          - question: I need to run a database. Which VM size should I use?
+          - question: Managed disks versus unmanaged disks?
+          - question: I need to set up a Linux server with an Apache web server, a MySQL Database and PHP installed already on it. What are my options?
+          - question: Why should I consider creating my own disk images?
+
+      - unit: Virtual Machine Scale Sets
+        link: https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/3-design-for-azure-virtual-machine-solutions
+        whiteboard: /whiteboards/02-vmss.png
+        questions:
+          - question: What are Virtual Machine Scale Sets?
+          - question: My VM Scale Set needs high availability. What are my options?
+          - question: I need to deploy my application to VM Scale Set. What are my options?
+
+      - unit: Azure Batch
+        link: https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/4-design-for-azure-batch-solutions
+        whiteboard: /whiteboards/02-batch.png
+        questions:
+          - question: What is Azure Batch?
+          - question: What are some use cases to consider Azure Batch?
+          - question: What is the difference between a batch Pool, Node and Job?
+
+      - unit: Azure App Service
+        link: https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/5-design-for-azure-app-services-solutions
+        whiteboard: /whiteboards/02-app-service.png
+        questions:
+          - question: What is it that I pay for with an Azure App Service?
+          - question: Why would I consider deployment slots?
+          - question: My developers have difficulties implementing authentication and authorization. Can App Service provide this capability?
+          - question: I want to run a web app implemented in Go (Golang) in Azure App Service but find out that this language is not supported. What are my options?
+          - question: What are WebJobs? Why would I use these or should I use something different?
+
+      - unit: Container Instances
+        link: https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/6-design-for-azure-container-instances-solutions
+        whiteboard: /whiteboards/02-container-instances.png
+        questions:
+          - question: What are Azure Container Instances and why should I use it?
+          - question: When/Why should I NOT use it?
+          - question: What are multi-container groups?
+          - question: Why should I consider containers instead of Virtual Machines? (isolation, operating system, deployment, persistent storage, fault tolerance)
+          - question: What is a Virtual Kubelet?
+
+      - unit: Azure Kubernetes
+        link: https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/7-design-for-azure-kubernetes-solutions
+        whiteboard: /whiteboards/02-kubernetes.png
+        questions:
+          - question: What is Azure Kubernetes?
+          - question: Who needs to manage the Kubernetes cluster?
+          - question: What do you pay for?
+          - question: Can you deploy multiple Virtual Machine sizes/types?
+          - question: What methods exist to scale your application running on AKS?
+          - question: How can I isolate certain workloads inside my AKS cluster?
+          - question: What technology can I use when my application requires persistent storage?
+          - question: What are 2 ways of synchronizing storage across clusters?
+          - question: Can my application running on AKS connect to on-premise resources?
+          - question: I'm concerned about vulnerabilities and outdated base images. What can I do about this?
+          - question: Can I deploy multiple AKS clusters across non-paired regions? 
+
+      - unit: Azure Functions / Logic Apps 
+        link: https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/8-design-for-azure-functions-solutions
+        whiteboard: /whiteboards/02-functions.png
+        questions:
+          - question: Why would I consider Azure Functions? Do you have some scenarios?
+          - question: What do I pay for when using Serverless Functions?
+          - question: When should you NOT use Logic Apps?
+          - question: What are durable functions and why should I consider these?
+          - question: What are the different hosting plans available for Azure Functions and why should I choose for one over the other?
+          - question: Why would I consider to use a Premium plan for Azure Functions?
+
+      - unit: Logic Apps
+        link: https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/9-design-for-logic-app-solutions
+        whiteboard: /whiteboards/02-logic-apps.png
+        questions:
+          - question: Why would I consider Logic Apps? Do you have some scenarios?
+          - question: My application requires some complex business rules. Should I use Logic Apps?
+          - question: What do I pay for when using Logic Apps?
+          - question: Can I run a Logic App on a separate plan? Why would I do this?
+          - question: What are some differences between a Logic App and Durable Functions?
+
+  - module: 03 - Design a non-relational data storage solution
+    link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/
+    units:
+      - unit: Data Storage
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/2-design-for-data-storage
+        whiteboard: /whiteboards/03-data-storage.png
+        questions:
+          - question: What is the difference between Structured/Unstructured/Semi-structured?
+          - question: What are your options for storing unstructured data in Azure? Why would you choose one over the other?
+
+      - unit: Azure Storage
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/3-design-for-azure-storage-accounts
+        whiteboard: /whiteboards/03-azure-storage.png
+        questions:
+          - question: When should you NOT choose a Standard General Purpose V2 storage account?
+          - question: How many storage accounts do you actually need? What should you consider?
+          - question: What does the SLA of 99.9% or 99.99% mean in relation to an Azure Storage account?
+          - question: Does replication between data centers and regions happen synchronous?
+          - question: Can I read from a secondary region?
+          - question: Under what circumstances can you have loss of data, even when replication has been setup?
+          - question: Will Microsoft fail over or is the customer who initiates the fail over to another region?
+          - question: Why would I consider the cool storage and archive storage tiers?
+          - question: How many hours can it take to rehydrate archived blobs?
+          - question: Why would I use immutable storage for Azure Storage?
+          - question: What is the difference between time-based retention policies and legal hold policies?
+          - question: Which data sets and policies would be most helpful in your organization?
+
+      - unit: Azure Files
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/6-design-for-azure-files
+        whiteboard: /whiteboards/03-azure-files.png
+        questions:
+          - question: When would you use Azure Files instead of Azure Blob storage?
+          - question: Which protocols are supported with Azure Files?
+          - question: What is file sync and why do you need it?
+          - question: Which file storage tiers exists and which one would you choose in the following scenarios
+            extra:
+                - You have highly I/O-intensive workloads, with high throughput and low latency
+                - You need storage optimized for general purpose file sharing scenarios such as team shares and Azure File Sync	
+                - You need cost-efficient storage optimized for online archive storage scenarios
+                - You have transaction heavy workloads and applications that require file storage and backend storage
+          - question: Why would I consider Azure NetApp files?
+
+      - unit: Azure Disks
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/7-design-for-azure-disk-solutions
+        whiteboard: /whiteboards/03-azure-disks.png
+        questions:
+          - question: Azure offers Ultra-disk, Premium SSD, Standard SSD and Standard HDD disk types. What could be a valid scenario to choose one over the other?
+          - question: Why would I consider to change disk caching from None to ReadOnly or Read/Write? How should I configure these when implementing a SQL Server Database?
+          - question: Encryption types for Managed Azure Disks includes Azure Disk Encryption (ADE), Server-Side Encryption (SSE) and encryption at host. What's the difference and should you combine these?
+          - question: What is the difference between an image and a snapshot?
+          - question: Can you share multiple disks across VM's?
+          - question: How can you improve performance by implementing multiple disks?
+
+      - unit: Storage security
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/8-design-for-storage-security
+        whiteboard: /whiteboards/03-storage-security.png
+        questions:
+          - question: Why should I never hand out the Azure Storage Account Key?
+          - question: What is a Shared Access Signature and at which level can I create it?
+          - question: Should I protect my storage account at the network level? What are my options?
+          - question: Can I bring my own encryption key? How granular can I implement this?
+
+  - module: 04 - Design a data storage solution for relational data
+    link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data
+    units:
+      - unit: Azure SQL Database
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data/
+        whiteboard: /whiteboards/04-azure-sql.png
+        questions:
+          - question: Azure SQL Database can be hosted in many ways. What could be my decision criteria?
+          - question: What are elastic pools?
+          - question: How can Elastic pools help you achieve vertical scaling?
+          - question: What is the difference between DTU and the vCore model?
+          - question: When should I consider the serverless compute tier for Azure SQL Database?
+          - question: Why would I choose for the Business Critical tier instead of the General Purpose Tier? 
+          - question: Why would I consider the Hyperscale tier instead of a Dedicated pool in Azure Synapse Analytics?
+          - question: There are 2 types of horizontal scaling - sharding and read-scale-out.
+          - question: Azure SQL Database offers the following capabilities for recovering from an outage. Why would I choose for one over the other?
+            extra:  
+                - Active geo-replication
+                - Auto-failover groups
+                - Geo-restore
+                - Zone-redundant databases
+          - question: What encryption mechanisms should I consider when data is at rest, in motion and in process
+          - question: Azure SQL Database supports SQL authencation and Azure Active Directory authentication. Why should I consider AAD authentication?
+
+      - unit: Azure SQL Edge 
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data/8-design-for-azure-sql-edge
+        questions:
+          - question: When would you consider to use Azure SQL Edge?
+          - question: What technology do you need to deploy Azure SQL Edge on?
+
+      - unit: Azure Cosmos DB
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data/9-design-for-azure-cosmos
+        questions:
+          - question: When would you consider to use Azure Cosmos DB?
+          - question: Table data can be stored as part of Azure Table Storage or inside Azure Cosmos DB. Why would you chose one over the other?
+          - question: How can you manage performance of an Azure Cosmos DB?
+
+  - module: 05 - Design a data integration solution
+    link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/
+    units:
+      - unit: Azure Data Factory
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/2-solution-azure-data-factory
+        questions:
+          - question: Why would you consider Azure Data Factory over SSIS (SQL Server Integration Services)?
+          - question: What do you pay for when using Azure Data Factory?
+          - question: What component of Azure Data Factory would you consider to perform data transformations? What alternatives are there?
+          - question: What is a Self-Hosted Integration Runtime and why do you need it?
+
+      - unit: Azure Data Lake
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/3-solution-azure-data-lake
+        questions:
+          - question: Azure Data Lake is built on top of Azure Blob Storage. What does it add?
+          - question: Why would I choose for a Data Lake, instead of regular Blob Storage? What could be my decision criteria?
+          - question: Why would I choose for Blob Storage, instead of Data Lake?
+          - question: Why is it important to support RBAC down to the individual file level?
+          - question: I need to organize my Data Lake. What are some common approaches?
+
+      - unit: Azure Databricks
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/4-solution-azure-data-brick
+        questions:
+          - question: What is Azure Databricks and what is Apache Spark?
+          - question: Which role would be using Azure Databricks?
+          - question: When would you choose to implement Azure Databricks?
+
+      - unit: Azure Synapse Analytics
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/5-solution-azure-synapse-analytics
+        questions:
+          - question: What is the difference between a serverless pool and a dedicated pool?
+          - question: What do I pay for with Synapse Analytics?
+          - question: Azure Synapse Analytics contains a component to set up pipelines and data flows, which is also part of Azure Data Factory. Why would I use this instead of ADF?
+          - question: Azure Synapse Analytics allows you to setup Spark Pools to process your data. Why would I consider this instead of Azure Databricks?
+          - question: What is Azure Synapse Link for Cosmos DB and what is the use case it tries to solve?
+
+      - unit: Strategy for hot/warm/cold data path
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/6-design-strategy-for-hot-warm-cold-data-path
+        questions:
+          - question: When to use Hot/Warm/Cold data path?
+
+      - unit: Azure Stream Analytics
+        link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/7-design-azure-stream-analytics-solution-for-data-analysis
+        questions:
+          - question: When would you consider to use Azure Stream Analytics? (use cases)
+          - question: What is a streaming unit (SU)?
+          - question: What are the main components to setup in Azure Stream Analytics?
+
+  - module: 06 - Design an application architecture solution
+    link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/
+    units:
+      - unit: Message and event scenarios
+        link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/2-describe-message-event-scenarios
+        questions:
+          - question: What is the difference between an event and a message and when would you choose for one over the other?
+          - question: Suppose you have a distributed application with a web service that authenticates users. When a user logs on, the web service notifies all the client applications so they can display that user's status as "Online". Is the login notification an example of a message or an event? 
+          - question: Let’s suppose a user uploads a new song by using your mobile music-sharing app. The mobile app must send that song to a web API that runs in Azure. The mobile app expects that the web API stores the new song in the database and makes it available to other users. Is this an example of a message or an event? 
+
+      - unit: Messaging solutions
+        link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/3-design-messaging-solution
+        questions:
+          - question: What are Azure Storage Queues and Azure Service Bus Queues?
+          - question: What is an Azure Service Bus Topic?
+          - question: Which messaging service should you choose? why choose for Azure Service Bus over Azure Storage Queues?
+          - question: What API do you use to interact with Azure Storage Queue?
+          - question: What can you do if the payload of a message is larger than 64 KB in size?
+
+      - unit: Event solutions (Event Hub and Event Grid) 
+        link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/4-design-event-hub-messaging-solution
+        questions:
+          - question: What is Event Hub and how does it compare to Azure Event Grid?
+          - question: What is the main consideration for the ‘pull’ model provided by Event Hubs? 
+          - question: How does Event Hub handle throughput?
+          - question: How much will you pay for storing 80GB of data per day in Event Hub?
+          - question: How does Event Hub relate to Kafka?
+          - question: What does Event Hub capture provide to you? Why is this important?
+          - question: What can you do if the payload of an event is larger than 256 KB?
+          - question: What is IoT Hub and what capabilities will it add over Event Hub?
+
+      - unit: Caching
+        link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/6-design-caching-solution
+        questions:
+          - question: When would you consider to use an Azure Cache for Redis?
+
+      - unit: API Management
+        link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/7-design-api-integration
+        questions:
+          - question: Why would you introduce an API management solution as implemented by APIM? What are the benefits/use case cases?
+
+      - unit: Application lifecycle
+        link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/8-design-automated-app-deployment-solution
+        questions:
+          - question: What Infrastructure as Code (IaC) technique do you use to automate the provisioning of infrastructure?
+          - question: Why would you use ARM templates versus Bicep?
+          - question: Why would you use Azure DevOps instead of GitHub?
+          - question: Why would you use Terraform instead of ARM/Bicep?
+          - question: What does Azure App Configuration offer to you?
+
+      - unit: Application configuration
+        link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/9-configuration-management-solution
+
+  - module: 07 - Design Authentication and Authorization Solutions
+    link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/
+    units:
+      - unit: Identity and access management
+        link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/2-design-for-identity-access-management
+        questions:
+          - question: What is the difference between AAD, AAD B2B and AAD B2C
+          - question: What is AADDS?
+
+      - unit: Azure Active Directory
+        link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/3-design-for-azure-active-directory
+        questions:
+          - question: What is Azure AD Connect and what is Azure AD Connect Cloud Sync? What could be a use case to use AAD Connect cloud sync?
+          - question: Is Azure AD Connect one-direction-only or does it support bi-directional replication?
+          - question: Does it make sense to deploy multiple AAD Tenants? Or should you stick with a single tenant?
+          - question: Why should you not synchronize accounts to Azure AD that have high privileges?
+          - question: Is Password Hash Synchronization safe to use?
+          - question: What is that SSO helps you to do?
+          - question: Should you centralize or de-centralize your identity management. Can you do both? 
+
+      - unit: Azure Active Directory B2B
+        link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/4-design-business-business
+        questions:
+          - question: Why would you consider Azure AD B2B?
+          - question: When implementing Azure AD B2B, does your partner need to have AAD as well? What identity providers are supported?
+          - question: Can you enforce MFA for guest accounts, even when they do not have this configured?
+          - question: What is an Access Panel?
+          - question: Who can invite guests? Should you centralize / de-centralize?
+          - question: What is a self-service sign-up flow? Can you customize this?
+
+      - unit: Azure Active Directory B2C
+        link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/5-design-business-customer
+        questions:
+          - question: Why would you consider Azure AD B2C?
+          - question: When implementing Azure AD B2B, does your client need to have AAD as well? What identity providers are supported?
+          - question: What is user flow? And can you customize the look and feel of the user interface?
+          - question: Where should I store custom user attributes?
+
+      - unit: Conditional access
+        link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/6-design-for-conditional-access
+        questions:
+          - question: What scenarios can you think of where conditional access would be beneficial?
+          - question: Why does conditional access provide more granular control over the MFA policies?
+          - question: You are not sure about the impact of changing a conditional access policy. What should you use?
+          - question: Which license do you need to use conditional access?
+          - question: You want to prevent people from using older legacy protocols like POPHowever, your CEO is still using an old laptop/software. What are your options?
+
+      - unit: Identity protection
+        link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/7-design-for-identity-protection
+        questions:
+          - question: What's the difference between sign-in risk and user risk?
+          - question: What are some common examples of sign-in risk and user risk?
+          - question: What should you do to enable break-the-glass/emergency access account?
+
+      - unit: Access reviews
+        link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/8-design-for-access-reviews
+        questions:
+          - question: What is an access review and why should you use it?
+          - question: What problem is it trying to solve?
+          - question: What license do you require?
+          - question: Who can conduct a review during an access review?
+ 
+      - unit: Service principals for applications
+        link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/9-design-service-principles
+        questions:
+          - question: What is a managed identity and what is it trying to solve?
+          - question: What is the difference between a user assigned identity and a system managed identity?
+          - question: What is the Azure Instance Metadata Service, and why is it important in the context of managed identity?
+          - question: What is a service principal?
+          - question: Can you explain the relationship between application objects and service principals?
+          - question: Microsoft identity platform supports two types of permissions - delegated permissions and application permissions. What is used when?
+
+      - unit: Azure key vault
+        link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/10-design-for-azure-key-vault
+        questions:
+          - question: Why use Azure Key Vault?
+          - question: How many Azure Key Vaults do you require for your applications?
+          - question: What is the difference between a key and a secret in Azure Key Vault?
+          - question: What is the difference between a key and a certificate in Azure Key vault?
+          - question: Azure Key Vault has two service tiers - Standard and Premium. Why would you choose one over the other?
+          - question: How can you authenticate against Azure Key Vault? (2 supported modes)
+
+  - module: 08 - Design a solution to log and monitor Azure resources
+    link: https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/
+    units:
+      - unit: Azure Monitor
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/2-design-for-azure-monitor-data-sources
+        questions:
+          - question: Azure Monitor collects data automatically from a range of components. Can you share some examples/use cases?
+          - question: Example - you have experienced recently an Azure Storage Account Key leakage. How can you prevent this in future?
+
+      - unit: Log Analytics
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/3-design-for-log-analytics
+        questions:
+          - question: How many Log Analytics resources do you need?
+          - question: Would you go for a centralized or decentralized approach? Hybrid?
+          - question: What do you pay for?
+          - question: What is the retention time for log data that has been ingested. Can you change this?
+          - question: How can you integrate logging data from Virtual Machines?
+          - question: What can you do to create a dashboard targeted towards business users, showing them some relevant metrics?
+          - question: You want to prevent users from accessing certain data in you Log Analytics workspace. Is this possible and how?
+          - question: Does Log Analytics have some rate limits applicable?
+          - question: How do you enforce capturing logging from your Azure resources into Log Analytics?
+
+      - unit: Azure workbooks and Azure Insights
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/4-design-for-azure-workbooks-insights
+        questions:
+          - question: What are Azure Workbooks? 
+          - question: Why would you consider to implement an Azure Workbook?
+          - question: What is Azure Application Insights and what does it offer on top of Log Analytics?
+          - question: What can you use the monitor your Azure Kubernetes environment?
+
+      - unit: Azure Data Explorer
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/5-design-for-azure-data-explorer
+        questions:
+          - question: What is Azure Data Explorer?
+          - question: What do you pay for?
+
+
+  - module: 09 - Design a network infrastructure solution
+    link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/
+    units:
+      - unit: Recommend a network architecture solution based on workload requirements
+        link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/2-recommend-network-architecture-solution-based-workload-requirements
+        questions:
+          - question: Why would you want to create multiple virtual networks, or create multiple subnets in your VNET?
+            links:
+                - https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/network-level-segmentation
+                - https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm
+          - question: Why does it matter to apply a naming convention when creating virtual networks?
+            links:
+                - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming#example-names-networking
+          - question: Can you deploy resources across multiple regions in the same virtual network?
+          - question: How large should your virtual network's address space be? 
+            extra:
+                - Why is important that virtual network address ranges do not overlap?
+          - question: What is the difference between a network virtual appliance (NVA) like a Firewall and a NSG Network Security Group?
+          - question: What is a hub and spoke topology and why would you consider it? What are the benefits/disadvantages?
+            extra:
+            - What resources should become part of your hub, and what would you deploy into your spokes?
+            - Should you allow spokes to communicate with each other directly? Why?
+
+      - unit: Design for on-premises connectivity to Azure virtual networks
+        link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/3-design-for-premises-connectivity-to-azure-virtual-networks
+        questions:
+          - question: Which Azure VPN Gateway SKU should you implement and why?
+          - question: What is the SLA offered by VPN Gateway and what is/is not included? How can you increase the SLA?
+          - question: Is traffic encrypted over the VPN Gateway?
+          - question: What can you do to troubleshoot your VPN connection? 
+          - question: Why would you consider an Express Route?
+          - question: Can you use an Express route and combine it with a VPN Gateway? Why would you do this?
+          - question: What advantage brings Azure Virtual WAN to the table?
+
+      - unit: Design for Azure network connectivity services
+        link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/4-design-for-azure-network-connectivity-services
+        questions:
+          - question: When setting up peering between 2 virtual networks, is traffic encrypted? 
+          - question: What do you pay for when using VNET Peering?
+          - question: Why would you consider implementing Virtual Network NAT (Network Address Translation)?
+          - question: Why would you consider overriding Azure's default routing? How do you accomplish this?
+
+      - unit: Design for application delivery services
+        link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/5-design-for-application-delivery-services
+        questions:
+          - question: Why would you consider to use an Azure CDN Content Delivery Network. What problem does it solve?
+          - question: What possible sources should you consider for Azure CDN?
+          - question: What would you pay for and how does it compare to other services like Azure App Service?
+          - question: What are the differences between Load Balancer, Traffic Manager, Application Gateway and Front Door?
+
+      - unit: Design for application protection services  
+        link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/6-design-for-application-protection-services)
+        questions:
+          - question: Why would you want to go for Azure DDoS protection Standard instead of the default one?
+          - question: What would you pay for when using this service?
+          - question: What problem is it that Azure Private Link is trying to solve?
+          - question: Should you consider Azure Firewall or go for any other 3rd party firewall technology?
+          - question: What are the advantages and disadvantages of setting up Service Endpoints?
+          - question: What's the difference between Network Security Groups and Application Security Groups
+          - question: What problem is it that Azure Bastion solves?
+          - question: How can you implement Just in Time Access?
+
+
+  - module: 10 - Design a business continuity solution
+    link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/
+    units:
+      - unit: Backup and recovery
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/2-design-recovery
+        questions:
+          - question: What is the difference between RTO and RPO?
+            links:
+              - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/considerations/protect
+              - https://docs.microsoft.com/en-us/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview
+              - https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics
+            whiteboard: /whiteboards/10-rpo-vs-rto.png
+          - question: What are SLA's and why does it matter? Who provides the SLA?
+            links:
+              - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/considerations/impact
+              - https://azure.microsoft.com/en-us/support/legal/sla/
+            whiteboard: /whiteboards/10-sla.png
+          - question: How would you calculate the SLA?
+            links:
+              - https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics#understand-service-level-agreements
+            whiteboard: /whiteboards/10-sla-composite.png
+          - question: What is MTBF and MTTR and what would be appropriate values?
+            whiteboard: /whiteboards/10-mtbf-mttr.png
+          - question: How do you know that a service/application does (not) reach it's SLA?
+            links:
+              - https://docs.microsoft.com/en-us/azure/architecture/framework/devops/checklist
+              - https://docs.microsoft.com/en-us/azure/architecture/example-scenario/monitoring/enterprise-monitoring
+              - https://docs.microsoft.com/en-us/azure/azure-monitor/app/availability-overview
+            whiteboard: /whiteboards/10-enterprise-monitoring.png
+          - question: Why do you need both disaster recovery and backup?
+            links:
+              - https://docs.microsoft.com/en-us/learn/modules/describe-high-availability-disaster-recovery-strategies/3-explore-high-availability-disaster-recovery-options
+            whiteboard: /whiteboards/10-bcdr-strategy.png
+          - question: Why would you test your disaster recovery?
+            whiteboard: /whiteboards/10-recovery-why.png
+
+      - unit: Azure Backup
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/3-design-for-azure-backup
+        questions:
+          - question: What can you backup with Azure Backup?
+            links:
+              - https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix
+            whiteboard: /whiteboards/10-backup.png
+          - question: What do you pay for?
+            links:
+              - https://azure.microsoft.com/en-us/pricing/details/backup/
+          - question: How much data can you store and for how long?
+            links:
+              - https://docs.microsoft.com/en-us/azure/backup/backup-azure-vm-backup-faq
+              - https://docs.microsoft.com/en-us/azure/backup/archive-tier-support
+            whiteboard: /whiteboards/10-backup-retention.png
+          - question: What does it mean to have application consistent backups?
+            whiteboard: /whiteboards/10-backup-consistency.png
+          - question: Can you backup SQL databases with it?
+            links:
+              - https://docs.microsoft.com/en-us/azure/backup/backup-azure-sql-database
+            whiteboard: /whiteboards/10-backup-sqlserver.png
+          - question: Does it store backups also across regions? Only the region pair or other regions?
+            links:
+              - https://docs.microsoft.com/en-us/azure/backup/guidance-best-practices
+          - question: Why is it important to protect your Azure Backup? How can you accomplish this?
+            links:
+              - https://docs.microsoft.com/en-us/azure/backup/guidance-best-practices#security-considerations
+            whiteboard: /whiteboards/10-backup-different-azure-built-in-roles-actions.png
+
+      - unit: Azure blob backup and recovery
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/4-design-for-azure-blob-backup-recovery
+        questions:
+          - question: What are the features you can use with Azure Blob storage to be able to recover data without Azure Backup?
+            links: 
+              - https://docs.microsoft.com/en-us/azure/storage/blobs/data-protection-overview
+            whiteboard: /whiteboards/10-backup-storage.png
+          - question: Can you perform a Point-in-time restore on Azure Blob storage? 
+            links:
+              - https://docs.microsoft.com/en-us/azure/storage/blobs/point-in-time-restore-overview
+            whiteboard: /whiteboards/10-backup-storage-ptr.png
+          - question: Can you use Azure Backup to backup Azure Blob storage? Why would you use/not use this?
+          - question: Can you recover a deleted Azure Storage account?
+            links:
+              - https://docs.microsoft.com/en-us/azure/storage/common/storage-account-recover
+            whiteboard: /whiteboards/10-storage-deleted.png 
+          - question: How many years can you configure immutable storage?
+            links:
+              - https://docs.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview
+              - https://www.rijksmuseum.nl/nl/collectie/SK-A-1699
+            whiteboard: /whiteboards/10-worm.png
+
+      - unit: Azure Files backup and recovery
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/5-design-for-azure-files-backup-recovery
+        questions:
+          - question: What are Azure Files snapshots?
+            whiteboard: /whiteboards/10-snapshots.png
+          - question: How would you automate file share backups?
+            whiteboard: /whiteboards/10-file-share-automated.png
+          - question: Why should you configure alerting and reporting provided by Azure Backup?
+            links:
+              - https://docs.microsoft.com/en-us/azure/backup/monitoring-and-alerts-overview
+              - https://docs.microsoft.com/en-us/azure/backup/backup-afs
+            whiteboard: /whiteboards/10-backup-alert.png 
+          - question: Why would you want to perform an on-demand backup of a file share if it is also scheduled?
+            links: 
+              - https://docs.microsoft.com/en-us/azure/backup/manage-recovery-points
+            whiteboard: /whiteboards/10-backup-ondemand.png
+
+      - unit: Azure virtual machine backup and recovery
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/6-design-for-azure-virtual-machine-backup-recovery
+        questions:
+          - question: What is the difference between snapshot tier and vault tier?
+            whiteboard: /whiteboards/10-snapshot-vault-tier.png
+
+      - unit: Azure SQL backup and recovery
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/7-design-for-azure-sql-backup-recovery
+        questions:
+          - question: How does Azure SQL perform backups and what's the interval, RPO and RTO?
+            links:
+              - https://docs.microsoft.com/en-us/azure/azure-sql/database/automated-backups-overview?tabs=single-database
+            whiteboard: /whiteboards/10-sql-backup.png
+          - question: What happens in case a region goes down? Can I restore to another region and who is responsible for this?
+            links:
+              - https://docs.microsoft.com/en-us/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview
+            whiteboard: /whiteboards/10-sql-restore.png
+
+      - unit: Azure Site Recovery
+        link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/8-design-for-azure-site-recover
+        questions:
+          - question: Why would you choose Azure Site Recovery over another (3rd-party) solution?
+            whiteboard: /whiteboards/10-site-recovery-strategy.png
+          - question: Why would you combine Azure Site Recovery with Azure Backup?
+
+  - module: 11 - Design a migration solution
+    link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/
+    units:
+      - unit: Evaluate migration with the Cloud Adoption Framework
+        link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/2-evaluate-migration-cloud-adoption-framework
+        questions:
+          - question: Microsoft Cloud Adoption Framework for Azure?
+          - question: What kind of activities should be performed during the assesment phase?
+
+      - unit: Describe the Azure Migration Framework
+        link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/3-describe-azure-migration-framework
+        questions:
+          - question: Which strategy should you take when considering a migration?        
+
+      - unit: Assess your workloads
+        link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/4-assess-your-premises-workloads
+
+      - unit: Compare migration tools
+        link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/5-select-migration-tool
+
+      - unit: Migrate your databases
+        link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/6-migrate-your-databases
+
+      - unit: Select an online migration tool
+        link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/7-select-online-storage-migration-tool
+
+      - unit: Select an offline migration tool
+        link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/8-migrate-offline-data

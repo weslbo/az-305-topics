@@ -174,86 +174,85 @@ __Total number of questions:__ 334
 
 ![whiteboard](/whiteboards/02-vm.png)
 
-1. What could be reasons to choose for Virtual Machines instead of PaaS services?
-2. Who is responsible for your VM? Microsoft or the customer?
-3. Can you run any VM in any region? What about pricing?
-4. I need to run a database. Which VM size should I use?
-5. Managed disks versus unmanaged disks?
-6. I need to set up a Linux server with an Apache web server, a MySQL Database and PHP installed already on it. What are my options?
-7. Why should I consider creating my own disk images?
+1. What could be reasons to choose for Virtual Machines instead of PaaS services? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)
+2. Who is responsible for your VM? Microsoft or the customer? [[doc]](https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility)
+3. Can you run any VM in any region? What about pricing? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/troubleshooting/error-sku-not-available?tabs=azure-cli)
+4. I need to run a database. Which VM size should I use? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes)
+5. Managed disks versus unmanaged disks? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview) [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/faq-for-disks) [[doc]](https://buildwindows.wordpress.com/2017/05/31/azure-managed-vs-unmanaged-disks-the-choice/)
+6. I need to set up a Linux server with an Apache web server, a MySQL Database and PHP installed already on it. What are my options? [[doc]](https://azuremarketplace.microsoft.com/en-us/) [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-lamp-stack)
+7. Why should I consider creating my own disk images? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/capture-image-resource) [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/create-vm-generalized-managed)
 
 ## Virtual Machine Scale Sets ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/3-design-for-azure-virtual-machine-solutions))
 
 ![whiteboard](/whiteboards/02-vmss.png)
 
-1. What are Virtual Machine Scale Sets?
-2. My VM Scale Set needs high availability. What are my options?
-3. I need to deploy my application to VM Scale Set. What are my options?
+1. What are Virtual Machine Scale Sets? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview)
+2. My VM Scale Set needs high availability. What are my options? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/availability?toc=/azure/virtual-machine-scale-sets/toc.json)
+3. I need to deploy my application to VM Scale Set. What are my options? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/shared-image-galleries?toc=/azure/virtual-machine-scale-sets/windows/toc.json) [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/custom-script-linux)
 
 ## Azure Batch ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/4-design-for-azure-batch-solutions))
 
 ![whiteboard](/whiteboards/02-batch.png)
 
-1. What is Azure Batch?
-2. What are some use cases to consider Azure Batch?
-3. What is the difference between a batch Pool, Node and Job?
+1. What is Azure Batch? [[doc]](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview)
+2. What are some use cases to consider Azure Batch? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/infrastructure/video-rendering) [[doc]](https://docs.microsoft.com/en-us/gaming/azure/reference-architectures/multiplayer-synchronous-batch) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/ai/batch-scoring-r-models) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/big-compute-with-azure-batch) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/infrastructure/hpc-cfd)
+3. What is the difference between a batch Pool, Node and Job? [[doc]](https://docs.microsoft.com/en-us/azure/batch/nodes-and-pools) [[doc]](https://docs.microsoft.com/en-us/azure/batch/jobs-and-tasks)
 
 ## Azure App Service ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/5-design-for-azure-app-services-solutions))
 
 ![whiteboard](/whiteboards/02-app-service.png)
 
-1. What is it that I pay for with an Azure App Service?
-2. Why would I consider deployment slots?
-3. My developers have difficulties implementing authentication and authorization. Can App Service provide this capability?
-4. I want to run a web app implemented in Go (Golang) in Azure App Service but find out that this language is not supported. What are my options?
-5. What are WebJobs? Why would I use these or should I use something different?
+1. What is it that I pay for with an Azure App Service? [[doc]](https://docs.microsoft.com/en-us/azure/app-service/overview-hosting-plans#how-much-does-my-app-service-plan-cost) [[doc]](https://docs.microsoft.com/en-us/azure/app-service/overview-manage-costs#understand-the-full-billing-model-for-azure-app-service)
+2. Why would I consider deployment slots? [[doc]](https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots)
+3. My developers have difficulties implementing authentication and authorization. Can App Service provide this capability? [[doc]](https://docs.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
+4. I want to run a web app implemented in Go (Golang) in Azure App Service but find out that this language is not supported. What are my options? [[doc]](https://docs.microsoft.com/en-us/azure/app-service/quickstart-custom-container?tabs=dotnet&pivots=container-linux)
+5. What are WebJobs? Why would I use these or should I use something different? [[doc]](https://docs.microsoft.com/en-us/azure/app-service/webjobs-create) [[doc]](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
 
 ## Container Instances ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/6-design-for-azure-container-instances-solutions))
 
 ![whiteboard](/whiteboards/02-container-instances.png)
 
-1. What are Azure Container Instances and why should I use it?
-2. When/Why should I NOT use it?
-3. What are multi-container groups?
-4. Why should I consider containers instead of Virtual Machines? (isolation, operating system, deployment, persistent storage, fault tolerance)
-5. What is a Virtual Kubelet?
+1. What are Azure Container Instances and why should I use it? [[doc]](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-overview)
+2. When/Why should I NOT use it? [[doc]](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-orchestrator-relationship) [[doc]](https://docs.microsoft.com/en-us/azure/container-apps/compare-options)
+3. What are multi-container groups? [[doc]](https://docs.microsoft.com/en-us/azure/container-instances/container-instances-container-groups)
+4. Why should I consider containers instead of Virtual Machines? (isolation, operating system, deployment, persistent storage, fault tolerance) [[doc]](https://docs.microsoft.com/en-us/virtualization/windowscontainers/about/containers-vs-vm)
+5. What is a Virtual Kubelet? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/scale-using-aks-with-aci) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/hybrid/hybrid-containers)
 
 ## Azure Kubernetes ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/7-design-for-azure-kubernetes-solutions))
 
 ![whiteboard](/whiteboards/02-kubernetes.png)
 
-1. What is Azure Kubernetes?
-2. Who needs to manage the Kubernetes cluster?
-3. What do you pay for?
-4. Can you deploy multiple Virtual Machine sizes/types?
-5. What methods exist to scale your application running on AKS?
-6. How can I isolate certain workloads inside my AKS cluster?
-7. What technology can I use when my application requires persistent storage?
-8. What are 2 ways of synchronizing storage across clusters?
-9. Can my application running on AKS connect to on-premise resources?
-10. I'm concerned about vulnerabilities and outdated base images. What can I do about this?
-11. Can I deploy multiple AKS clusters across non-paired regions?
+1. What is Azure Kubernetes? [[doc]](https://azure.microsoft.com/en-us/resources/kubernetes-learning-path/)
+2. Who needs to manage the Kubernetes cluster? [[doc]](https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads)
+3. What do you pay for? [[doc]](https://azure.microsoft.com/en-us/pricing/details/kubernetes-service/)
+4. Can you deploy multiple Virtual Machine sizes/types? [[doc]](https://docs.microsoft.com/en-us/azure/aks/use-multiple-node-pools)
+5. What methods exist to scale your application running on AKS? [[doc]](https://docs.microsoft.com/en-us/azure/aks/concepts-scale)
+6. How can I isolate certain workloads inside my AKS cluster? [[doc]](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-cluster-isolation) [[doc]](https://docs.microsoft.com/en-us/azure/aks/concepts-clusters-workloads#namespaces)
+7. What technology can I use when my application requires persistent storage? [[doc]](https://docs.microsoft.com/en-us/azure/aks/concepts-storage)
+8. What are 2 ways of synchronizing storage across clusters? [[doc]](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-multi-region#infrastructure-based-asynchronous-replication) [[doc]](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-multi-region#application-based-asynchronous-replication)
+9. Can my application running on AKS connect to on-premise resources? [[doc]](https://docs.microsoft.com/en-us/azure/aks/concepts-network)
+10. I'm concerned about vulnerabilities and outdated base images. What can I do about this? [[doc]](https://docs.microsoft.com/en-us/azure/defender-for-cloud/defender-for-containers-introduction?tabs=defender-for-container-arch-aks) [[doc]](https://docs.microsoft.com/en-us/azure/aks/concepts-security)
+11. Can I deploy multiple AKS clusters across non-paired regions? [[doc]](https://docs.microsoft.com/en-us/azure/aks/operator-best-practices-multi-region)
 
-## Azure Functions / Logic Apps ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/8-design-for-azure-functions-solutions))
+## Azure Functions ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/8-design-for-azure-functions-solutions))
 
 ![whiteboard](/whiteboards/02-functions.png)
 
-1. Why would I consider Azure Functions? Do you have some scenarios?
-2. What do I pay for when using Serverless Functions?
-3. When should you NOT use Logic Apps?
-4. What are durable functions and why should I consider these?
-5. What are the different hosting plans available for Azure Functions and why should I choose for one over the other?
-6. Why would I consider to use a Premium plan for Azure Functions?
+1. Why would I consider Azure Functions? Do you have some scenarios? [[doc]](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/) [[doc]](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/serverless-design-examples) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app)
+2. What do I pay for when using Serverless Functions? [[doc]](https://docs.microsoft.com/en-us/azure/azure-functions/pricing)
+3. What are durable functions and why should I consider these? [[doc]](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/durable-azure-functions) [[doc]](https://docs.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview?tabs=csharp)
+4. What are the different hosting plans available for Azure Functions and why should I choose for one over the other? [[doc]](https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale)
+5. Why would I consider to use a Premium plan for Azure Functions? [[doc]](https://docs.microsoft.com/en-us/azure/azure-functions/functions-premium-plan?tabs=portal)
 
 ## Logic Apps ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/9-design-for-logic-app-solutions))
 
 ![whiteboard](/whiteboards/02-logic-apps.png)
 
-1. Why would I consider Logic Apps? Do you have some scenarios?
-2. My application requires some complex business rules. Should I use Logic Apps?
-3. What do I pay for when using Logic Apps?
-4. Can I run a Logic App on a separate plan? Why would I do this?
-5. What are some differences between a Logic App and Durable Functions?
+1. Why would I consider Logic Apps? Do you have some scenarios? [[doc]](https://docs.microsoft.com/en-us/dotnet/architecture/serverless/logic-apps) [[doc]](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-overview) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/enterprise-integration/basic-enterprise-integration) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/integration/logic-apps-data-integration) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/hybrid/gateway-logic-apps)
+2. My application requires some complex business rules. Should I use Logic Apps? [[doc]](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-serverless-overview)
+3. What do I pay for when using Logic Apps? [[doc]](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-pricing) [[doc]](https://azure.microsoft.com/en-us/pricing/details/logic-apps/)
+4. Can I run a Logic App on a separate plan? Why would I do this? [[doc]](https://docs.microsoft.com/en-us/azure/logic-apps/single-tenant-overview-compare)
+5. What are some differences between a Logic App and Durable Functions? [[doc]](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs#compare-azure-functions-and-azure-logic-apps)
 
 # 03 - Design a non-relational data storage solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/))
 
@@ -261,59 +260,60 @@ __Total number of questions:__ 334
 
 ![whiteboard](/whiteboards/03-data-storage.png)
 
-1. What is the difference between Structured/Unstructured/Semi-structured?
-2. What are your options for storing unstructured data in Azure? Why would you choose one over the other?
+1. What is the difference between Structured/Unstructured/Semi-structured? [[doc]](https://docs.microsoft.com/en-us/learn/modules/choose-storage-approach-in-azure/2-classify-data)
+2. What are your options for storing unstructured data in Azure? Why would you choose one over the other? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree)
 
 ## Azure Storage ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/3-design-for-azure-storage-accounts))
 
 ![whiteboard](/whiteboards/03-azure-storage.png)
 
-1. When should you NOT choose a Standard General Purpose V2 storage account?
-2. How many storage accounts do you actually need? What should you consider?
-3. What does the SLA of 99.9% or 99.99% mean in relation to an Azure Storage account?
-4. Does replication between data centers and regions happen synchronous?
-5. Can I read from a secondary region?
-6. Under what circumstances can you have loss of data, even when replication has been setup?
-7. Will Microsoft fail over or is the customer who initiates the fail over to another region?
-8. Why would I consider the cool storage and archive storage tiers?
-9. How many hours can it take to rehydrate archived blobs?
-10. Why would I use immutable storage for Azure Storage?
-11. What is the difference between time-based retention policies and legal hold policies?
-12. Which data sets and policies would be most helpful in your organization?
+1. When should you NOT choose a Standard General Purpose V2 storage account? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview)
+2. How many storage accounts do you actually need? What should you consider? [[doc]](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/3-design-for-azure-storage-accounts)
+3. What does the SLA of 99.9% or 99.99% mean in relation to an Azure Storage account? [[doc]](https://azure.microsoft.com/en-us/support/legal/sla/storage/v1_5/)
+4. Does replication between data centers and regions happen synchronous? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy)
+5. Can I read from a secondary region? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy#read-access-to-data-in-the-secondary-region)
+6. Under what circumstances can you have loss of data, even when replication has been setup? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy#redundancy-in-a-secondary-region)
+7. Can I switch between replication types? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/redundancy-migration?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=portal)
+8. Will Microsoft fail over or is the customer who initiates the fail over to another region? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-disaster-recovery-guidance?toc=/azure/storage/blobs/toc.json)
+9. Why would I consider the cool storage and archive storage tiers? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/access-tiers-overview)
+10. How many hours can it take to rehydrate archived blobs? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/archive-rehydrate-overview#rehydration-priority)
+11. Why would I use immutable storage for Azure Storage? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/immutable-policy-configure-version-scope?tabs=azure-portal) [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/immutable-policy-configure-container-scope?tabs=azure-portal)
+12. What is the difference between time-based retention policies and legal hold policies? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/immutable-time-based-retention-policy-overview) [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/immutable-legal-hold-overview)
+13. Which data sets and policies would be most helpful in your organization?
 
 ## Azure Files ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/6-design-for-azure-files))
 
 ![whiteboard](/whiteboards/03-azure-files.png)
 
-1. When would you use Azure Files instead of Azure Blob storage?
-2. Which protocols are supported with Azure Files?
-3. What is file sync and why do you need it?
-4. Which file storage tiers exists and which one would you choose in the following scenarios
+1. When would you use Azure Files instead of Azure Blob storage? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction#example-scenarios)
+2. Which protocols are supported with Azure Files? [[doc]](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-introduction)
+3. What is file sync and why do you need it? [[doc]](https://docs.microsoft.com/en-us/azure/storage/file-sync/file-sync-introduction) [[doc]](https://docs.microsoft.com/en-us/azure/storage/file-sync/file-sync-planning)
+4. Which file storage tiers exists and which one would you choose in the following scenarios [[doc]](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-planning#storage-tiers)
     - You have highly I/O-intensive workloads, with high throughput and low latency
     - You need storage optimized for general purpose file sharing scenarios such as team shares and Azure File Sync
     - You need cost-efficient storage optimized for online archive storage scenarios
     - You have transaction heavy workloads and applications that require file storage and backend storage
-5. Why would I consider Azure NetApp files?
+5. Why would I consider Azure NetApp files? [[doc]](https://docs.microsoft.com/en-us/azure/azure-netapp-files/azure-netapp-files-introduction) [[doc]](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-netapp-comparison)
 
 ## Azure Disks ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/7-design-for-azure-disk-solutions))
 
 ![whiteboard](/whiteboards/03-azure-disks.png)
 
-1. Azure offers Ultra-disk, Premium SSD, Standard SSD and Standard HDD disk types. What could be a valid scenario to choose one over the other?
-2. Why would I consider to change disk caching from None to ReadOnly or Read/Write? How should I configure these when implementing a SQL Server Database?
-3. Encryption types for Managed Azure Disks includes Azure Disk Encryption (ADE), Server-Side Encryption (SSE) and encryption at host. What's the difference and should you combine these?
-4. What is the difference between an image and a snapshot?
-5. Can you share multiple disks across VM's?
-6. How can you improve performance by implementing multiple disks?
+1. Azure offers Ultra-disk, Premium SSD, Standard SSD and Standard HDD disk types. What could be a valid scenario to choose one over the other? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-types#disk-type-comparison)
+2. Why would I consider to change disk caching from None to ReadOnly or Read/Write? How should I configure these when implementing a SQL Server Database? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/premium-storage-performance#disk-caching) [[doc]](https://docs.microsoft.com/en-us/learn/modules/caching-and-performance-azure-storage-and-disks/3-enable-and-configure-azure-vm-disk-cache-by-using-the-azure-portal) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-storage) [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-performance#virtual-machine-uncached-vs-cached-limits)
+3. Encryption types for Managed Azure Disks includes Azure Disk Encryption (ADE), Server-Side Encryption (SSE) and encryption at host. What's the difference and should you combine these? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/disk-encryption-overview)
+4. What is the difference between an image and a snapshot? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/shared-image-galleries) [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-incremental-snapshots?tabs=azure-cli)
+5. Can you share multiple disks across VM's? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/disks-shared)
+6. How can you improve performance by implementing multiple disks? [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/premium-storage-performance#disk-striping)
 
 ## Storage security ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/8-design-for-storage-security))
 
 ![whiteboard](/whiteboards/03-storage-security.png)
 
-1. Why should I never hand out the Azure Storage Account Key?
-2. What is a Shared Access Signature and at which level can I create it?
-3. Should I protect my storage account at the network level? What are my options?
-4. Can I bring my own encryption key? How granular can I implement this?
+1. Why should I never hand out the Azure Storage Account Key? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage?tabs=azure-portal)
+2. What is a Shared Access Signature and at which level can I create it? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview?toc=/azure/storage/blobs/toc.json)
+3. Should I protect my storage account at the network level? What are my options? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=azure-portal) [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-private-endpoints?toc=/azure/storage/blobs/toc.json) [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/transport-layer-security-configure-minimum-version?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&tabs=portal) [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-require-secure-transfer?toc=/azure/storage/blobs/toc.json)
+4. Can I bring my own encryption key? How granular can I implement this? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-service-encryption?toc=/azure/storage/blobs/toc.json) [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/customer-managed-keys-overview?toc=/azure/storage/blobs/toc.json) [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/encryption-scope-overview)
 
 # 04 - Design a data storage solution for relational data ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data))
 
@@ -321,32 +321,34 @@ __Total number of questions:__ 334
 
 ![whiteboard](/whiteboards/04-azure-sql.png)
 
-1. Azure SQL Database can be hosted in many ways. What could be my decision criteria?
-2. What are elastic pools?
-3. How can Elastic pools help you achieve vertical scaling?
-4. What is the difference between DTU and the vCore model?
-5. When should I consider the serverless compute tier for Azure SQL Database?
-6. Why would I choose for the Business Critical tier instead of the General Purpose Tier?
-7. Why would I consider the Hyperscale tier instead of a Dedicated pool in Azure Synapse Analytics?
-8. There are 2 types of horizontal scaling - sharding and read-scale-out.
-9. Azure SQL Database offers the following capabilities for recovering from an outage. Why would I choose for one over the other?
+1. Azure SQL Database can be hosted in many ways. What could be my decision criteria? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview?toc=/azure/cloud-adoption-framework/toc.json&bc=/azure/cloud-adoption-framework/_bread/toc.json)
+2. What are elastic pools? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/elastic-pool-overview)
+3. How can Elastic pools help you achieve vertical scaling? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/elastic-scale-introduction#horizontal-and-vertical-scaling)
+4. What is the difference between DTU and the vCore model? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/service-tiers-dtu) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/service-tiers-sql-database-vcore)
+5. When should I consider the serverless compute tier for Azure SQL Database? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/serverless-tier-overview)
+6. Why would I choose for the Business Critical tier instead of the General Purpose Tier? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/service-tiers-general-purpose-business-critical)
+7. Why would I consider the Hyperscale tier instead of a Dedicated pool in Azure Synapse Analytics? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/service-tier-hyperscale-frequently-asked-questions-faq#how-can-i-choose-between-azure-synapse-analytics-and-azure-sql-database-hyperscale-)
+8. There are 2 types of horizontal scaling - sharding and read-scale-out. [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/scale-resources) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/read-scale-out)
+9. Azure SQL Database offers the following capabilities for recovering from an outage. Why would I choose for one over the other? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/disaster-recovery-guidance)
     - Active geo-replication
     - Auto-failover groups
     - Geo-restore
     - Zone-redundant databases
-10. What encryption mechanisms should I consider when data is at rest, in motion and in process
-11. Azure SQL Database supports SQL authencation and Azure Active Directory authentication. Why should I consider AAD authentication?
+10. What encryption mechanisms should I consider when data is at rest, in motion and in process [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/security-overview#transport-layer-security-encryption-in-transit) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/transparent-data-encryption-tde-overview?tabs=azure-portal) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/always-encrypted-landing) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/dynamic-data-masking-overview)
+11. Azure SQL Database supports SQL authencation and Azure Active Directory authentication. Why should I consider AAD authentication? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/authentication-aad-overview)
 
 ## Azure SQL Edge ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data/8-design-for-azure-sql-edge))
 
-1. When would you consider to use Azure SQL Edge?
-2. What technology do you need to deploy Azure SQL Edge on?
+![whiteboard](/whiteboards/04-azure-sql-edge.png)
+
+1. When would you consider to use Azure SQL Edge? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql-edge/overview) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/solution-ideas/articles/data-storage-edge)
+2. What technology do you need to deploy Azure SQL Edge on? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql-edge/disconnected-deployment) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql-edge/deploy-kubernetes)
 
 ## Azure Cosmos DB ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-relational-data/9-design-for-azure-cosmos))
 
-1. When would you consider to use Azure Cosmos DB?
-2. Table data can be stored as part of Azure Table Storage or inside Azure Cosmos DB. Why would you chose one over the other?
-3. How can you manage performance of an Azure Cosmos DB?
+1. When would you consider to use Azure Cosmos DB? [[doc]](https://docs.microsoft.com/en-us/azure/cosmos-db/introduction#solutions-that-benefit-from-azure-cosmos-db) [[doc]](https://docs.microsoft.com/en-us/azure/cosmos-db/choose-api)
+2. Table data can be stored as part of Azure Table Storage or inside Azure Cosmos DB. Why would you chose one over the other? [[doc]](https://docs.microsoft.com/en-us/azure/cosmos-db/table/table-support)
+3. How can you manage performance of an Azure Cosmos DB? [[doc]](https://docs.microsoft.com/en-us/azure/cosmos-db/request-units) [[doc]](https://docs.microsoft.com/en-us/azure/cosmos-db/throughput-serverless)
 
 # 05 - Design a data integration solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-data-integration/))
 
@@ -660,10 +662,10 @@ __Total number of questions:__ 334
 4. What is the expected outcome of an Azure Migrate assesment?
 5. Why would you use DMA (Data Migration Assistant) and DMS (Data Migration Service)?
 6. Imagine you have 1000's of VM's to migrate. You want to take a phased approach and not migrate everything at once, but rather workload by workload. What tool would you use during the assement so you know the dependencies between machines?
-7. Why do I need to download an appliance in my Hyper-V/VMWare environment?
-8. What is the difference between agentless/agent-based dependency analysis?
-9. I don't want to use an appliance. What are my options?
-10. Why does it make sense to keep the assement tool running for a longer period of time?
+7. Why do I need to download an appliance in my Hyper-V/VMWare environment? [[doc]](https://docs.microsoft.com/en-us/azure/migrate/migrate-appliance)
+8. What is the difference between agentless/agent-based dependency analysis? [[doc]](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies) [[doc]](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies-agentless)
+9. I don't want to use an appliance. What are my options? [[doc]](https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-import)
+10. Why does it make sense to keep the assement tool running for a longer period of time? [[doc]](https://docs.microsoft.com/en-us/azure/migrate/how-to-create-assessment) [[doc]](https://docs.microsoft.com/en-us/azure/migrate/how-to-modify-assessment)
 
 ## Compare migration tools ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/5-select-migration-tool))
 

@@ -905,25 +905,85 @@ modules:
       - unit: Evaluate migration with the Cloud Adoption Framework
         link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/2-evaluate-migration-cloud-adoption-framework
         questions:
-          - question: Microsoft Cloud Adoption Framework for Azure?
-          - question: What kind of activities should be performed during the assesment phase?
+          - question: Why would you consider migrating to Azure?
+            links: 
+              - https://docs.microsoft.com/en-us/azure/migrate/concepts-migration-planning#define-cloud-migration-goals
+          - question: What is the Microsoft Cloud Adoption Framework for Azure?
+          - question: Why should I use/not use this when considering a migration?
 
       - unit: Describe the Azure Migration Framework
         link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/3-describe-azure-migration-framework
         questions:
-          - question: Which strategy should you take when considering a migration?        
+          - question: What are the 4 stages in the Azure Migration Framework?
+            extra: 
+              - What happens during each of these stages?
+          - question: Which strategy should you take when considering a migration?
+          - question: What is the difference between refactoring and rearchitecting?
 
       - unit: Assess your workloads
         link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/4-assess-your-premises-workloads
+        questions:
+          - question: Why would you consider Azure TCO Calculator?
+          - question: What kind of activities should be performed during the assesment phase?
+          - question: What is an Azure Migrate Project?
+          - question: What is the expected outcome of an Azure Migrate assesment?
+          - question: Why would you use DMA (Data Migration Assistant) and DMS (Data Migration Service)?
+          - question: Imagine you have 1000's of VM's to migrate. You want to take a phased approach and not migrate everything at once, but rather workload by workload. What tool would you use during the assement so you know the dependencies between machines?
+          - question: Why do I need to download an appliance in my Hyper-V/VMWare environment?
+            link: https://docs.microsoft.com/en-us/azure/migrate/migrate-appliance
+          - question: What is the difference between agentless/agent-based dependency analysis?
+            links:
+              - https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies
+              - https://docs.microsoft.com/en-us/azure/migrate/how-to-create-group-machine-dependencies-agentless
+          - question: I don't want to use an appliance. What are my options?
+            link: https://docs.microsoft.com/en-us/azure/migrate/tutorial-discover-import
+          - question: Why does it make sense to keep the assement tool running for a longer period of time?
+            links: 
+              - https://docs.microsoft.com/en-us/azure/migrate/how-to-create-assessment
+              - https://docs.microsoft.com/en-us/azure/migrate/how-to-modify-assessment
 
       - unit: Compare migration tools
         link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/5-select-migration-tool
+        questions:
+          - question: What tools should I consider to migrate a workload to Azure?
+            link: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/azure-migration-guide/migrate?tabs=Tools
+          - question: What can you do with Azure Migrate (scenarios)?
+            link: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/
+          - question: What is the Azure App Service Migration Assistant?
+            links:
+              - https://github.com/Azure/App-Service-Migration-Assistant/wiki
+              - https://docs.microsoft.com/en-us/learn/modules/migrate-app-service-migration-assistant/
+          - question: What is the Azure Resource Mover?
+            link: https://docs.microsoft.com/en-us/azure/resource-mover/overview
 
       - unit: Migrate your databases
         link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/6-migrate-your-databases
+        questions:
+          - question: What is the Azure Database Migration Service?
+            link: https://docs.microsoft.com/en-us/azure/dms/dms-overview
+          - question: Can you perform online migration with minimal downtime?
+            link: https://docs.microsoft.com/en-us/azure/dms/resource-scenario-status#online-continuous-sync-migration-support
+          - question: Which prerequisites need to be in place before you can perform an online/offline migration?
+            link: https://docs.microsoft.com/en-us/azure/dms/pre-reqs
+          - question: Which tool would you use to migrate the database schema?
+            link: https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver15
+          - question: Which tool would you use to migrate the data?
+            link: https://docs.microsoft.com/en-us/azure/dms/dms-overview
 
-      - unit: Select an online migration tool
+      - unit: Select an online storage migration tool
         link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/7-select-online-storage-migration-tool
+        questions:
+          - question: When would you use the Windows Storage Migration Service?
+            link: https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#why-use-storage-migration-service
+          - question: When would you use Azure File Sync?
+            link: https://docs.microsoft.com/en-us/azure/storage/files/storage-files-migration-overview?toc=/azure/storage/filesync/toc.json
 
-      - unit: Select an offline migration tool
+      - unit: Select an offline storage migration tool
         link: https://docs.microsoft.com/en-us/learn/modules/design-migrations/8-migrate-offline-data
+        questions:
+          - question: When would you use the Azure Import/Export service?
+            link: https://docs.microsoft.com/en-us/azure/import-export/storage-import-export-service
+          - question: When would you use Data Box?
+            link: https://docs.microsoft.com/en-us/azure/databox/data-box-overview
+          - question: What other tools can you use to import/export moderate volumes of data?
+            link: https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10

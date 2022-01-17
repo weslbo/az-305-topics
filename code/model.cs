@@ -8,6 +8,7 @@ namespace code
         public string whiteboard { get; set; }
         public List<string> extra { get; set; }
         public List<string> links { get; set; }
+        public string link { get; set; }
     }
 
 

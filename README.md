@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-__Total number of questions:__ 307
+__Total number of questions:__ 334
 
 - [01 - Design a governance solution](#01---design-a-governance-solution-learn-module)
 - [02 - Design a compute solution](#02---design-a-compute-solution-learn-module)
@@ -23,8 +23,13 @@ __Total number of questions:__ 307
 ![whiteboard](/whiteboards/01-governance.png)
 
 1. What is governance and why is it important? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/methodology)
+    - Who would be asking for this in your company?
+    - At which moment in time would you think about implementing governance?
+    - What if you don't implement it?
 2. How can you organize your resources? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/govern/guides/standard/)
 3. Where should I apply permissions for people to manage resources? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles)
+    - Think again about the hierarchy. Should your DBA be given permissions at the top of the management groups, or rather at the individual SQL databases?
+    - What are the pro's and con's?
 
 ## Management Groups ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/3-design-for-management-groups))
 
@@ -32,10 +37,15 @@ __Total number of questions:__ 307
 
 1. What are management groups and why should you consider implementing them? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
 2. How many levels can management groups support? [[doc]](https://docs.microsoft.com/en-us/azure/governance/management-groups/overview)
+    - Does it include the tenant root level?
 3. Should you go for a deeply nested hierarchy, or for a reasonably flat one? Why? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
 4. Why should you consider a top-level management group? [[doc]](https://docs.microsoft.com/en-us/learn/modules/design-governance/3-design-for-management-groups)
 5. How would you organize your management groups? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups#management-groups-in-the-azure-landing-zone-accelerator)
+    - By department/geography/product line/...
 6. How do you protect your management groups so that not everyone can create/update them? [[doc]](https://docs.microsoft.com/en-us/azure/governance/management-groups/overview#management-group-access)
+    - Who can create them?
+    - Who can assign a subscription to a management group?
+    - Can I as a subscription owner move my subscription to another management group (and circumvent certain policies)?
 
 ## Subscriptions ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/4-design-for-subscriptions))
 
@@ -43,13 +53,25 @@ __Total number of questions:__ 307
 
 1. What is an Azure Subscription? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-subscriptions)
 2. How many subscriptions do you need across your organization? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/scale-subscriptions)
+    - Would you need one, or multiple?
 3. Who is responsible for paying the subscription?
+    - Somebody's got to pay $$$
+    - Do you have agreement with key business stakeholders and are they willing to pay for the services?
 4. Which offer do I choose for my subscription? [[doc]](https://azure.microsoft.com/en-us/support/legal/offer-details/)
+    - Different customers, different prices...
 5. Are there any scale limits to my subscriptions? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits)
+    - Could be a reason to go for multiple subscription. Do you know which limits exists at the level of a subscription?
 6. I need to deploy 30,000 VMs. How many subscriptions do I need?
+    - Can you find the answer in the docs?
+    - What would be your advice?
 7. Should my organization go for a centralized vs decentralized approach? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/centralize-operations)
+    - Who will be managing these subscriptions and resources within it?
+    - Central IT or decentralize and let the business be agile?
+    - Will you put everything under an enterprise agreement?
 8. We want to enforce common policies and role assignments across many subscriptions. What should we do? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/policy-enforcement/)
 9. My developers want to setup sandboxes so they can experiment, but we want to isolate them from the production environment. What should we consider? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/resource-org-management-groups)
+    - Developers! Developers! Developers!
+    - It works on my machine!
 
 ## Resource groups ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/5-design-for-resource-groups))
 
@@ -58,11 +80,19 @@ __Total number of questions:__ 307
 1. What is a resource group? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/fundamental-concepts)
 2. How should I group resources? (by type, location, workload, billing, department, lifecycle, ...) [[doc]](https://docs.microsoft.com/en-us/learn/modules/control-and-organize-with-azure-resource-manager/2-principles-of-resource-groups)
 3. I have a resource group in WESTEU. Can I deploy resources in NORTHEU? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group)
+    - Can I prevent his?
 4. Can I move resources between resource groups? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription) [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-support-resources)
+    - In case it's not possible, what would be my approach?
 5. Can I nest resource groups?
+    - Would this make sense to you?
 6. Can I deploy a resource in multiple resource groups?
+    - for example - Azure Traffic Manager...
 7. Should I apply permissions and at what level?
+    - Your DBA should get access to all SQL Databases. At which level or you going to assign RBAC?
+    - What role?
+    - Will you need a custom role?
 8. I don't want anyone to delete my central Azure Firewall. What can I do? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources?tabs=json)
+    - Deleting my Azure Firewall would make my whole environment pretty useless!
 
 ## Resource tags? ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/6-design-for-resource-tags))
 
@@ -70,13 +100,24 @@ __Total number of questions:__ 307
 
 1. What's the purpose of resource tags? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json)
 2. How many tags can I apply to a resource? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json)
+    - What's the maximum?
+    - Should you go for the maximum?
 3. If I apply a tag at the level of a resource group, will it inherit down to the individual resource? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies)
+    - In case the answer is no, what would be the recommended solution?
 4. Can you come up with some examples where you could leverage tags on resources? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/decision-guides/resource-tagging/?toc=/azure/azure-resource-manager/management/toc.json)
+    - functional, classification, accounting, partnership, purpose
+    - how could this fit in your company setup?
 5. Will you implement a chargeback or show back accounting system?
+    - Will you need to associate resources with accounting information for departments, business groups, and teams in more detail than a simple subscription-level breakdown allows?
 6. Does tagging need to represent details such regulatory compliance requirements for a resource?
+    - What about operational details such as uptime requirements, patching schedules, or security requirements?
 7. What can I do to enforce tagging [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies#policy-definitions)
+    - eg - cost center is required!
 8. Are there resources which do not support tagging? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-support)
+    - Can you find one in the documentation?
 9. What tags will be required for all resources based on centralized IT policy? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-tagging)
+    - What tags will be optional?
+    - Are individual teams allowed to implement their own custom tagging schemes?
 
 ## Azure Policy ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/7-design-for-azure-policy))
 
@@ -84,23 +125,36 @@ __Total number of questions:__ 307
 
 1. What is an Azure Policy? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/overview)
 2. At what level should you apply an Azure Policy? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/overview#assignments)
+    - Can you apply this to an individual resource?
 3. I have multiple Azure Policies to enforce. Any recommendations? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/initiative-definition-structure) [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/samples/built-in-initiatives)
 4. When are Azure Policies evaluated? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/overview#understand-evaluation-outcomes) [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/evaluate-impact) [[doc]](https://docs.microsoft.com/en-us/learn/modules/design-governance/7-design-for-azure-policy)
+    - Timing is everything!
 5. What should happen when the resource is not compliant against the policy? What are my options? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/effects)
 6. Can I automatically remediate the resource to become compliant? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/event-overview) [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/tutorials/route-state-change-events) [[doc]](https://docs.microsoft.com/en-us/azure/logic-apps/policy-reference)
+    - What technology could I use to support the remediation?
+    - What do I need to think about?
 
 ## RBAC (Role Based Access Control) ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/8-design-for-role-based-access-control))
 
 ![whiteboard](/whiteboards/01-rbac.png)
 
 1. Who should I give access, and at what level? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles)
+    - Think again about the Database Administrator in your company.
+    - Should everyone be an owner/contributor?
 2. Should I assign roles to users or groups? [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/best-practices)
+    - How would this make my life easier?
 3. Should everyone be an owner/contributor? [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/deny-assignments)
+    - Can I explicitly deny access?
+    - I don't trust my colleagues ;-)
 4. When should you create a custom role? [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles) [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/considerations/roles#use-custom-roles)
+    - Azure has hundreds of roles out of the box...
 5. What happens if roles are overlapping? [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/overview#how-azure-rbac-determines-if-a-user-has-access-to-a-resource)
+    - I got assigned permissions at different levels... Now what?
 6. How to allow some users to control the virtual machines in an environment but prevent them from modifying networking and other resources in the same resource group or Azure subscription?
 7. Can you assign a role to a non-user? (aka service account?) [[doc]](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-steps)
+    - I want to make use of GitHub actions and automate the deployment of ARM templates...
 8. How does Azure Policy differ from RBAC? [[doc]](https://docs.microsoft.com/en-us/azure/governance/policy/overview#azure-policy-and-azure-rbac)
+    - What's the purpose of each of these?
 
 ## Azure Blueprints ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-governance/9-design-for-azure-blueprints))
 
@@ -108,6 +162,8 @@ __Total number of questions:__ 307
 
 1. What is an Azure Blueprint and why would I consider this? [[doc]](https://docs.microsoft.com/en-us/azure/governance/blueprints/overview)
 2. What elements are part of an Azure Blueprint?
+    - Can I / Should I include ARM templates?
+    - Are there alternatives?
 3. How do we enforce compliance? [[doc]](https://docs.microsoft.com/en-us/azure/governance/blueprints/samples/)
 
 # 02 - Design a compute solution ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-compute-solution/))
@@ -233,6 +289,10 @@ __Total number of questions:__ 307
 2. Which protocols are supported with Azure Files?
 3. What is file sync and why do you need it?
 4. Which file storage tiers exists and which one would you choose in the following scenarios
+    - You have highly I/O-intensive workloads, with high throughput and low latency
+    - You need storage optimized for general purpose file sharing scenarios such as team shares and Azure File Sync
+    - You need cost-efficient storage optimized for online archive storage scenarios
+    - You have transaction heavy workloads and applications that require file storage and backend storage
 5. Why would I consider Azure NetApp files?
 
 ## Azure Disks ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-storage-solution-for-non-relational-data/7-design-for-azure-disk-solutions))
@@ -270,6 +330,10 @@ __Total number of questions:__ 307
 7. Why would I consider the Hyperscale tier instead of a Dedicated pool in Azure Synapse Analytics?
 8. There are 2 types of horizontal scaling - sharding and read-scale-out.
 9. Azure SQL Database offers the following capabilities for recovering from an outage. Why would I choose for one over the other?
+    - Active geo-replication
+    - Auto-failover groups
+    - Geo-restore
+    - Zone-redundant databases
 10. What encryption mechanisms should I consider when data is at rest, in motion and in process
 11. Azure SQL Database supports SQL authencation and Azure Active Directory authentication. Why should I consider AAD authentication?
 
@@ -481,8 +545,11 @@ __Total number of questions:__ 307
 2. Why does it matter to apply a naming convention when creating virtual networks? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming#example-names-networking)
 3. Can you deploy resources across multiple regions in the same virtual network?
 4. How large should your virtual network's address space be?
+    - Why is important that virtual network address ranges do not overlap?
 5. What is the difference between a network virtual appliance (NVA) like a Firewall and a NSG Network Security Group?
 6. What is a hub and spoke topology and why would you consider it? What are the benefits/disadvantages?
+    - What resources should become part of your hub, and what would you deploy into your spokes?
+    - Should you allow spokes to communicate with each other directly? Why?
 
 ## Design for on-premises connectivity to Azure virtual networks ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/3-design-for-premises-connectivity-to-azure-virtual-networks))
 
@@ -574,12 +641,53 @@ __Total number of questions:__ 307
 
 ## Evaluate migration with the Cloud Adoption Framework ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/2-evaluate-migration-cloud-adoption-framework))
 
-1. Microsoft Cloud Adoption Framework for Azure?
-2. What kind of activities should be performed during the assesment phase?
+1. Why would you consider migrating to Azure? [[doc]](https://docs.microsoft.com/en-us/azure/migrate/concepts-migration-planning#define-cloud-migration-goals)
+2. What is the Microsoft Cloud Adoption Framework for Azure?
+3. Why should I use/not use this when considering a migration?
 
 ## Describe the Azure Migration Framework ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/3-describe-azure-migration-framework))
 
-1. Which strategy should you take when considering a migration?
+1. What are the 4 stages in the Azure Migration Framework?
+    - What happens during each of these stages?
+2. Which strategy should you take when considering a migration?
+3. What is the difference between refactoring and rearchitecting?
 
 ## Assess your workloads ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/4-assess-your-premises-workloads))
+
+1. Why would you consider Azure TCO Calculator?
+2. What kind of activities should be performed during the assesment phase?
+3. What is an Azure Migrate Project?
+4. What is the expected outcome of an Azure Migrate assesment?
+5. Why would you use DMA (Data Migration Assistant) and DMS (Data Migration Service)?
+6. Imagine you have 1000's of VM's to migrate. You want to take a phased approach and not migrate everything at once, but rather workload by workload. What tool would you use during the assement so you know the dependencies between machines?
+7. Why do I need to download an appliance in my Hyper-V/VMWare environment?
+8. What is the difference between agentless/agent-based dependency analysis?
+9. I don't want to use an appliance. What are my options?
+10. Why does it make sense to keep the assement tool running for a longer period of time?
+
+## Compare migration tools ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/5-select-migration-tool))
+
+1. What tools should I consider to migrate a workload to Azure? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/azure-migration-guide/migrate?tabs=Tools)
+2. What can you do with Azure Migrate (scenarios)? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/)
+3. What is the Azure App Service Migration Assistant? [[doc]](https://github.com/Azure/App-Service-Migration-Assistant/wiki) [[doc]](https://docs.microsoft.com/en-us/learn/modules/migrate-app-service-migration-assistant/)
+4. What is the Azure Resource Mover? [[doc]](https://docs.microsoft.com/en-us/azure/resource-mover/overview)
+
+## Migrate your databases ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/6-migrate-your-databases))
+
+1. What is the Azure Database Migration Service? [[doc]](https://docs.microsoft.com/en-us/azure/dms/dms-overview)
+2. Can you perform online migration with minimal downtime? [[doc]](https://docs.microsoft.com/en-us/azure/dms/resource-scenario-status#online-continuous-sync-migration-support)
+3. Which prerequisites need to be in place before you can perform an online/offline migration? [[doc]](https://docs.microsoft.com/en-us/azure/dms/pre-reqs)
+4. Which tool would you use to migrate the database schema? [[doc]](https://docs.microsoft.com/en-us/sql/dma/dma-overview?view=sql-server-ver15)
+5. Which tool would you use to migrate the data? [[doc]](https://docs.microsoft.com/en-us/azure/dms/dms-overview)
+
+## Select an online storage migration tool ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/7-select-online-storage-migration-tool))
+
+1. When would you use the Windows Storage Migration Service? [[doc]](https://docs.microsoft.com/en-us/windows-server/storage/storage-migration-service/overview#why-use-storage-migration-service)
+2. When would you use Azure File Sync? [[doc]](https://docs.microsoft.com/en-us/azure/storage/files/storage-files-migration-overview?toc=/azure/storage/filesync/toc.json)
+
+## Select an offline storage migration tool ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-migrations/8-migrate-offline-data))
+
+1. When would you use the Azure Import/Export service? [[doc]](https://docs.microsoft.com/en-us/azure/import-export/storage-import-export-service)
+2. When would you use Data Box? [[doc]](https://docs.microsoft.com/en-us/azure/databox/data-box-overview)
+3. What other tools can you use to import/export moderate volumes of data? [[doc]](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10)
 

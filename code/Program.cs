@@ -53,7 +53,13 @@ namespace code
                         if (q.links != null)
                             q.links.ForEach(link => sb.Append($" [[doc]]({link})"));
 
+                        if (!string.IsNullOrEmpty(q.link))
+                            sb.Append($" [[doc]]({q.link})");
+
                         sb.Append("\n");
+
+                        if (q.extra != null)
+                            q.extra.ForEach(e => sb.AppendLine($"    - {e}"));
                     }
 
                     sb.AppendLine();

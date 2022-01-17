@@ -665,46 +665,97 @@ modules:
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/2-solution-azure-data-factory
         questions:
           - question: Why would you consider Azure Data Factory over SSIS (SQL Server Integration Services)?
+            links:
+              - https://docs.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/pipeline-orchestration-data-movement
+              - https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/data/enterprise-bi-adf
+              - https://docs.microsoft.com/en-us/azure/architecture/example-scenario/data/hybrid-etl-with-adf
           - question: What do you pay for when using Azure Data Factory?
+            links:
+              - https://docs.microsoft.com/en-us/azure/data-factory/plan-manage-costs
+              - https://docs.microsoft.com/en-us/azure/data-factory/pricing-concepts
           - question: What component of Azure Data Factory would you consider to perform data transformations? What alternatives are there?
+            link: https://docs.microsoft.com/en-us/azure/data-factory/transform-data
           - question: What is a Self-Hosted Integration Runtime and why do you need it?
+            links: 
+              - https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime#self-hosted-integration-runtime
+              - https://docs.microsoft.com/en-us/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory
 
       - unit: Azure Data Lake
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/3-solution-azure-data-lake
         questions:
           - question: Azure Data Lake is built on top of Azure Blob Storage. What does it add?
+            link: https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction#key-features-of-data-lake-storage-gen2
           - question: Why would I choose for a Data Lake, instead of regular Blob Storage? What could be my decision criteria?
+            links: 
+              - https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-namespace
+              - https://docs.microsoft.com/en-us/azure/architecture/data-guide/scenarios/data-lake
           - question: Why would I choose for Blob Storage, instead of Data Lake?
+            links: 
+              - https://docs.microsoft.com/en-us/azure/storage/blobs/storage-feature-support-in-storage-accounts
+              - https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree
           - question: Why is it important to support RBAC down to the individual file level?
+            link: https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-access-control-model#access-control-lists-acls
           - question: I need to organize my Data Lake. What are some common approaches?
+            links:
+              - https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-best-practices#directory-structure
+              - https://docs.microsoft.com/en-us/azure/databricks/delta/delta-intro
+              - https://docs.microsoft.com/en-us/learn/modules/describe-azure-databricks-delta-lake-architecture/2-describe-bronze-silver-gold-architecture
 
       - unit: Azure Databricks
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/4-solution-azure-data-brick
         questions:
           - question: What is Azure Databricks and what is Apache Spark?
+            links:
+              - https://docs.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks
+              - https://docs.microsoft.com/en-us/azure/databricks/getting-started/overview
+              - https://docs.microsoft.com/en-us/azure/databricks/getting-started/spark/
           - question: Which role would be using Azure Databricks?
+            link: https://docs.microsoft.com/en-us/learn/modules/describe-azure-databricks/2-explain?ns-enrollment-type=LearningPath&ns-enrollment-id=learn.wwl.perform-data-science-azure-databricks
           - question: When would you choose to implement Azure Databricks?
+            link: https://docs.microsoft.com/en-us/azure/architecture/example-scenario/mlops/aml-decision-tree
 
       - unit: Azure Synapse Analytics
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/5-solution-azure-synapse-analytics
         questions:
           - question: What is the difference between a serverless pool and a dedicated pool?
+            links:
+              - https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is?context=/azure/synapse-analytics/context/context
+              - https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/on-demand-workspace-overview
+              - https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/overview-features
           - question: What do I pay for with Synapse Analytics?
+            link: https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/
           - question: Azure Synapse Analytics contains a component to set up pipelines and data flows, which is also part of Azure Data Factory. Why would I use this instead of ADF?
+            link: https://docs.microsoft.com/en-us/azure/synapse-analytics/data-integration/concepts-data-factory-differences
           - question: Azure Synapse Analytics allows you to setup Spark Pools to process your data. Why would I consider this instead of Azure Databricks?
+            link: https://docs.microsoft.com/en-us/answers/questions/587071/differnce-between-synapse-and-databricks.html
           - question: What is Azure Synapse Link for Cosmos DB and what is the use case it tries to solve?
+            link: https://docs.microsoft.com/en-us/azure/cosmos-db/synapse-link
 
       - unit: Strategy for hot/warm/cold data path
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/6-design-strategy-for-hot-warm-cold-data-path
         questions:
           - question: When to use Hot/Warm/Cold data path?
+            links: 
+              - https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/
+              - https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/batch-processing
+              - https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/real-time-processing
 
       - unit: Azure Stream Analytics
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/7-design-azure-stream-analytics-solution-for-data-analysis
         questions:
           - question: When would you consider to use Azure Stream Analytics? (use cases)
+            links:
+              - https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-solution-patterns
+              - https://docs.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/stream-processing
+              - https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction
+              - https://azure.microsoft.com/case-studies/?service=stream-analytics
           - question: What is a streaming unit (SU)?
+            link: https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-streaming-unit-consumption
           - question: What are the main components to setup in Azure Stream Analytics?
+            links:
+              - https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-add-inputs
+              - https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-define-outputs
+              - https://docs.microsoft.com/en-us/stream-analytics-query/stream-analytics-query-language-reference
 
   - module: 06 - Design an application architecture solution
     link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/

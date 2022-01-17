@@ -2,7 +2,7 @@
 
 ## Table of contents
 
-__Total number of questions:__ 334
+__Total number of questions:__ 333
 
 - [01 - Design a governance solution](#01---design-a-governance-solution-learn-module)
 - [02 - Design a compute solution](#02---design-a-compute-solution-learn-module)
@@ -395,118 +395,118 @@ __Total number of questions:__ 334
 
 ## Message and event scenarios ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/2-describe-message-event-scenarios))
 
-1. What is the difference between an event and a message and when would you choose for one over the other?
+1. What is the difference between an event and a message and when would you choose for one over the other? [[doc]](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services#event-vs-message-services)
 2. Suppose you have a distributed application with a web service that authenticates users. When a user logs on, the web service notifies all the client applications so they can display that user's status as "Online". Is the login notification an example of a message or an event?
 3. Let’s suppose a user uploads a new song by using your mobile music-sharing app. The mobile app must send that song to a web API that runs in Azure. The mobile app expects that the web API stores the new song in the database and makes it available to other users. Is this an example of a message or an event?
 
 ## Messaging solutions ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/3-design-messaging-solution))
 
-1. What are Azure Storage Queues and Azure Service Bus Queues?
-2. What is an Azure Service Bus Topic?
-3. Which messaging service should you choose? why choose for Azure Service Bus over Azure Storage Queues?
-4. What API do you use to interact with Azure Storage Queue?
-5. What can you do if the payload of a message is larger than 64 KB in size?
+1. What are Azure Storage Queues and Azure Service Bus Queues and how would you compare them? [[doc]](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted)
+2. What is an Azure Service Bus Topic? [[doc]](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions)
+3. What API do you use to interact with Azure Storage Queue? [[doc]](https://docs.microsoft.com/en-us/azure/storage/queues/reference)
+4. What can you do if the payload of a message is larger than 64 KB in size? [[doc]](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted#capacity-and-quotas) [[doc]](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support)
 
 ## Event solutions (Event Hub and Event Grid) ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/4-design-event-hub-messaging-solution))
 
-1. What is Event Hub and how does it compare to Azure Event Grid?
-2. What is the main consideration for the ‘pull’ model provided by Event Hubs?
-3. How does Event Hub handle throughput?
-4. How much will you pay for storing 80GB of data per day in Event Hub?
-5. How does Event Hub relate to Kafka?
-6. What does Event Hub capture provide to you? Why is this important?
-7. What can you do if the payload of an event is larger than 256 KB?
-8. What is IoT Hub and what capabilities will it add over Event Hub?
+1. What is Event Hub and how does it compare to Azure Event Grid? [[doc]](https://docs.microsoft.com/en-us/azure/event-grid/overview) [[doc]](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) [[doc]](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services#comparison-of-services)
+2. What is the main consideration for the ‘pull’ model provided by Event Hubs? [[doc]](https://docs.microsoft.com/en-us/learn/modules/choose-a-messaging-model-in-azure-to-connect-your-services/5-choose-azure-event-hubs)
+3. How does Event Hub handle throughput? [[doc]](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability)
+4. How much will you pay for storing 80GB of data per day in Event Hub? [[doc]](https://azure.microsoft.com/en-us/pricing/details/event-hubs/)
+5. How does Event Hub relate to Kafka? [[doc]](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview)
+6. What does Event Hub capture provide to you? Why is this important? [[doc]](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-capture-overview)
+7. What can you do if the payload of an event is larger than 256 KB? [[doc]](https://docs.microsoft.com/en-us/azure/event-hubs/compare-tiers)
+8. What is IoT Hub and what capabilities will it add over Event Hub? [[doc]](https://docs.microsoft.com/en-us/azure/iot-hub/iot-concepts-and-iot-hub) [[doc]](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-compare-event-hubs)
 
 ## Caching ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/6-design-caching-solution))
 
-1. When would you consider to use an Azure Cache for Redis?
+1. When would you consider to use an Azure Cache for Redis? [[doc]](https://docs.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview)
 
 ## API Management ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/7-design-api-integration))
 
-1. Why would you introduce an API management solution as implemented by APIM? What are the benefits/use case cases?
+1. Why would you introduce an API management solution as implemented by APIM? What are the benefits/use case cases? [[doc]](https://docs.microsoft.com/en-us/azure/api-management/api-management-key-concepts) [[doc]](https://azure.microsoft.com/mediahandler/files/resourcefiles/api-design/Azure_API-Design_Guide_eBook.pdf) [[doc]](https://azure.microsoft.com/mediahandler/files/resourcefiles/apis-microservices-ebook/Azure_API-Microservices_eBook.pdf)
 
 ## Application lifecycle ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/8-design-automated-app-deployment-solution))
 
-1. What Infrastructure as Code (IaC) technique do you use to automate the provisioning of infrastructure?
-2. Why would you use ARM templates versus Bicep?
-3. Why would you use Azure DevOps instead of GitHub?
-4. Why would you use Terraform instead of ARM/Bicep?
-5. What does Azure App Configuration offer to you?
+1. What Infrastructure as Code (IaC) technique do you use to automate the provisioning of infrastructure? [[doc]](https://docs.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code) [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview) [[doc]](https://docs.microsoft.com/en-us/learn/paths/fundamentals-bicep/) [[doc]](https://docs.microsoft.com/en-us/azure/developer/terraform/overview) [[doc]](https://docs.microsoft.com/en-us/azure/developer/ansible/overview) [[doc]](https://docs.microsoft.com/en-us/azure/developer/chef/overview)
+2. Why would you use ARM templates versus Bicep? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
+3. Why would you use Azure DevOps instead of GitHub? [[doc]](https://docs.microsoft.com/en-us/dotnet/architecture/devops-for-aspnet-developers/actions-vs-pipelines)
+4. Why would you use Terraform instead of ARM/Bicep? [[doc]](https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/infrastructure-as-code)
 
 ## Application configuration ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/9-configuration-management-solution))
+
+1. What does Azure App Configuration offer to you? [[doc]](https://docs.microsoft.com/en-us/azure/azure-app-configuration/overview)
 
 # 07 - Design Authentication and Authorization Solutions ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/))
 
 ## Identity and access management ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/2-design-for-identity-access-management))
 
-1. What is the difference between AAD, AAD B2B and AAD B2C
-2. What is AADDS?
+1. What is the difference between AAD, AAD B2B and AAD B2C [[doc]](https://azure.microsoft.com/mediahandler/files/resourcefiles/cloud-identity-and-access-management/Cloud_Identity_and_Access_Management_infographic.pdf/) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/compare-with-b2c)
+2. What is AADDS? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/scenarios)
 
 ## Azure Active Directory ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/3-design-for-azure-active-directory))
 
-1. What is Azure AD Connect and what is Azure AD Connect Cloud Sync? What could be a use case to use AAD Connect cloud sync?
-2. Is Azure AD Connect one-direction-only or does it support bi-directional replication?
-3. Does it make sense to deploy multiple AAD Tenants? Or should you stick with a single tenant?
-4. Why should you not synchronize accounts to Azure AD that have high privileges?
-5. Is Password Hash Synchronization safe to use?
-6. What is that SSO helps you to do?
-7. Should you centralize or de-centralize your identity management. Can you do both?
+1. What is Azure AD Connect and what is Azure AD Connect Cloud Sync? What could be a use case to use AAD Connect cloud sync? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-azure-ad-connect) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/cloud-sync/what-is-cloud-sync)
+2. Is Azure AD Connect one-direction-only or does it support bi-directional replication? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-sspr-writeback) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-group-writeback) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback)
+3. Does it make sense to deploy multiple AAD Tenants? Or should you stick with a single tenant? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/plan-connect-topologies) [[doc]](https://docs.microsoft.com/en-us/microsoft-365/education/deploy/design-multi-tenant-architecture#common-reasons-for-multiple-tenants)
+4. Why should you not synchronize accounts to Azure AD that have high privileges? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/roles/security-planning)
+5. Is Password Hash Synchronization safe to use? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization)
+6. What is that SSO helps you to do? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/what-is-single-sign-on)
+7. Should you centralize or de-centralize your identity management. Can you do both? [[doc]](https://docs.microsoft.com/en-us/learn/modules/implement-initial-configuration-of-azure-active-directory/6-configure-delegation-administrative-units?ns-enrollment-type=LearningPath)
 
 ## Azure Active Directory B2B ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/4-design-business-business))
 
-1. Why would you consider Azure AD B2B?
-2. When implementing Azure AD B2B, does your partner need to have AAD as well? What identity providers are supported?
-3. Can you enforce MFA for guest accounts, even when they do not have this configured?
-4. What is an Access Panel?
-5. Who can invite guests? Should you centralize / de-centralize?
-6. What is a self-service sign-up flow? Can you customize this?
+1. Why would you consider Azure AD B2B? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/compare-with-b2c)
+2. When implementing Azure AD B2B, does your partner need to have AAD as well? What identity providers are supported? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/what-is-b2b#collaborate-with-any-partner-using-their-identities)
+3. Can you enforce MFA for guest accounts, even when they do not have this configured? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/b2b-tutorial-require-mfa)
+4. What is an Access Panel? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/what-is-access-management) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/my-apps-deployment-plan)
+5. Who can invite guests? Should you centralize / de-centralize? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/add-users-administrator) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/add-users-information-worker) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/invite-internal-users) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/add-user-without-invite)
+6. What is a self-service sign-up flow? Can you customize this? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/self-service-sign-up-user-flow)
 
 ## Azure Active Directory B2C ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/5-design-business-customer))
 
-1. Why would you consider Azure AD B2C?
-2. When implementing Azure AD B2B, does your client need to have AAD as well? What identity providers are supported?
-3. What is user flow? And can you customize the look and feel of the user interface?
-4. Where should I store custom user attributes?
+1. Why would you consider Azure AD B2C? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-b2c/overview) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/compare-with-b2c?bc=/azure/active-directory-b2c/bread/toc.json&toc=/azure/active-directory-b2c/TOC.json#compare-external-identities-solutions)
+2. When implementing Azure AD B2B, does your client need to have AAD as well? What identity providers are supported? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-b2c/technical-overview#sign-in-with-external-identity-providers)
+3. What is user flow? And can you customize the look and feel of the user interface? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-b2c/user-flow-overview)
+4. Where should I store custom user attributes? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-b2c/configure-user-input?pivots=b2c-user-flow)
 
 ## Conditional access ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/6-design-for-conditional-access))
 
-1. What scenarios can you think of where conditional access would be beneficial?
-2. Why does conditional access provide more granular control over the MFA policies?
-3. You are not sure about the impact of changing a conditional access policy. What should you use?
-4. Which license do you need to use conditional access?
-5. You want to prevent people from using older legacy protocols like POPHowever, your CEO is still using an old laptop/software. What are your options?
+1. What scenarios can you think of where conditional access would be beneficial? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/plan-conditional-access)
+2. Why does conditional access provide more granular control over the MFA policies? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-userstates)
+3. You are not sure about the impact of changing a conditional access policy. What should you use? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/concept-conditional-access-report-only)
+4. Which license do you need to use conditional access? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/overview#license-requirements)
+5. You want to prevent people from using older legacy protocols like POP. However, your CEO is still using an old laptop/software. What are your options? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/block-legacy-authentication)
 
 ## Identity protection ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/7-design-for-identity-protection))
 
-1. What's the difference between sign-in risk and user risk?
-2. What are some common examples of sign-in risk and user risk?
-3. What should you do to enable break-the-glass/emergency access account?
+1. What's the difference between sign-in risk and user risk? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies)
+2. What are some common examples of sign-in risk and user risk? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/concept-identity-protection-risks)
+3. What should you do to enable break-the-glass/emergency access account? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/roles/security-emergency-access)
 
 ## Access reviews ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/8-design-for-access-reviews))
 
-1. What is an access review and why should you use it?
-2. What problem is it trying to solve?
-3. What license do you require?
-4. Who can conduct a review during an access review?
+1. What is an access review and why should you use it? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/manage-access-review) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/deploy-access-reviews)
+2. What problem is it trying to solve? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview#when-should-you-use-access-reviews)
+3. What license do you require? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview#license-requirements)
+4. Who can conduct a review during an access review? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/manage-access-review#create-and-perform-an-access-review-for-users)
 
 ## Service principals for applications ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/9-design-service-principles))
 
-1. What is a managed identity and what is it trying to solve?
-2. What is the difference between a user assigned identity and a system managed identity?
-3. What is the Azure Instance Metadata Service, and why is it important in the context of managed identity?
-4. What is a service principal?
-5. Can you explain the relationship between application objects and service principals?
-6. Microsoft identity platform supports two types of permissions - delegated permissions and application permissions. What is used when?
+1. What is a managed identity and what is it trying to solve? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
+2. What is the difference between a user assigned identity and a system managed identity? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types)
+3. What is the Azure Instance Metadata Service, and why is it important in the context of managed identity? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/how-managed-identities-work-vm) [[doc]](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service?tabs=windows)
+4. What is a service principal? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals)
+5. Can you explain the relationship between application objects and service principals? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals#relationship-between-application-objects-and-service-principals)
+6. Microsoft identity platform supports two types of permissions - delegated permissions and application permissions. What is used when? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#permission-types)
 
 ## Azure key vault ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/10-design-for-azure-key-vault))
 
-1. Why use Azure Key Vault?
-2. How many Azure Key Vaults do you require for your applications?
-3. What is the difference between a key and a secret in Azure Key Vault?
-4. What is the difference between a key and a certificate in Azure Key vault?
-5. Azure Key Vault has two service tiers - Standard and Premium. Why would you choose one over the other?
-6. How can you authenticate against Azure Key Vault? (2 supported modes)
+1. Why use Azure Key Vault? [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/general/overview#why-use-azure-key-vault)
+2. How many Azure Key Vaults do you require for your applications? [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/general/best-practices)
+3. What is the difference between a key and a secret in Azure Key Vault? [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/keys/about-keys) [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/keys/about-keys-details) [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/secrets/about-secrets)
+4. What is the difference between a key and a certificate in Azure Key vault? [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/keys/about-keys) [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/keys/about-keys-details) [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/certificates/about-certificates)
+5. Azure Key Vault has two service tiers - Standard and Premium. Why would you choose one over the other? [[doc]](https://azure.microsoft.com/en-us/pricing/details/key-vault/) [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/managed-hsm/overview)
+6. How can you authenticate against Azure Key Vault? (2 supported modes) [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/general/assign-access-policy?tabs=azure-portal) [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/general/rbac-guide?tabs=azure-cli)
 
 # 08 - Design a solution to log and monitor Azure resources ([Learn module](https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/))
 

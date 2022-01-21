@@ -407,11 +407,15 @@ __Total number of questions:__ 333
 
 ## Message and event scenarios ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/2-describe-message-event-scenarios))
 
+![whiteboard](/whiteboards/06-message-or-event.png)
+
 1. What is the difference between an event and a message and when would you choose for one over the other? [[doc]](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services#event-vs-message-services)
 2. Suppose you have a distributed application with a web service that authenticates users. When a user logs on, the web service notifies all the client applications so they can display that user's status as "Online". Is the login notification an example of a message or an event?
 3. Let’s suppose a user uploads a new song by using your mobile music-sharing app. The mobile app must send that song to a web API that runs in Azure. The mobile app expects that the web API stores the new song in the database and makes it available to other users. Is this an example of a message or an event?
 
 ## Messaging solutions ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/3-design-messaging-solution))
+
+![whiteboard](/whiteboards/06-messaging.png)
 
 1. What are Azure Storage Queues and Azure Service Bus Queues and how would you compare them? [[doc]](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted)
 2. What is an Azure Service Bus Topic? [[doc]](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions)
@@ -419,6 +423,8 @@ __Total number of questions:__ 333
 4. What can you do if the payload of a message is larger than 64 KB in size? [[doc]](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted#capacity-and-quotas) [[doc]](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-premium-messaging#large-messages-support)
 
 ## Event solutions (Event Hub and Event Grid) ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/4-design-event-hub-messaging-solution))
+
+![whiteboard](/whiteboards/06-events.png)
 
 1. What is Event Hub and how does it compare to Azure Event Grid? [[doc]](https://docs.microsoft.com/en-us/azure/event-grid/overview) [[doc]](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about) [[doc]](https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services#comparison-of-services)
 2. What is the main consideration for the ‘pull’ model provided by Event Hubs? [[doc]](https://docs.microsoft.com/en-us/learn/modules/choose-a-messaging-model-in-azure-to-connect-your-services/5-choose-azure-event-hubs)
@@ -431,13 +437,19 @@ __Total number of questions:__ 333
 
 ## Caching ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/6-design-caching-solution))
 
+![whiteboard](/whiteboards/06-caching.png)
+
 1. When would you consider to use an Azure Cache for Redis? [[doc]](https://docs.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview)
 
 ## API Management ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/7-design-api-integration))
 
+![whiteboard](/whiteboards/06-api-management.png)
+
 1. Why would you introduce an API management solution as implemented by APIM? What are the benefits/use case cases? [[doc]](https://docs.microsoft.com/en-us/azure/api-management/api-management-key-concepts) [[doc]](https://azure.microsoft.com/mediahandler/files/resourcefiles/api-design/Azure_API-Design_Guide_eBook.pdf) [[doc]](https://azure.microsoft.com/mediahandler/files/resourcefiles/apis-microservices-ebook/Azure_API-Microservices_eBook.pdf)
 
 ## Application lifecycle ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/8-design-automated-app-deployment-solution))
+
+![whiteboard](/whiteboards/06-app-lifecycle.png)
 
 1. What Infrastructure as Code (IaC) technique do you use to automate the provisioning of infrastructure? [[doc]](https://docs.microsoft.com/en-us/devops/deliver/what-is-infrastructure-as-code) [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview) [[doc]](https://docs.microsoft.com/en-us/learn/paths/fundamentals-bicep/) [[doc]](https://docs.microsoft.com/en-us/azure/developer/terraform/overview) [[doc]](https://docs.microsoft.com/en-us/azure/developer/ansible/overview) [[doc]](https://docs.microsoft.com/en-us/azure/developer/chef/overview)
 2. Why would you use ARM templates versus Bicep? [[doc]](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)

@@ -768,6 +768,7 @@ modules:
     units:
       - unit: Message and event scenarios
         link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/2-describe-message-event-scenarios
+        whiteboard: /whiteboards/06-message-or-event.png
         questions:
           - question: What is the difference between an event and a message and when would you choose for one over the other?
             link: https://docs.microsoft.com/en-us/azure/event-grid/compare-messaging-services#event-vs-message-services
@@ -776,6 +777,7 @@ modules:
 
       - unit: Messaging solutions
         link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/3-design-messaging-solution
+        whiteboard: /whiteboards/06-messaging.png
         questions:
           - question: What are Azure Storage Queues and Azure Service Bus Queues and how would you compare them?
             link: https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted
@@ -790,6 +792,7 @@ modules:
 
       - unit: Event solutions (Event Hub and Event Grid) 
         link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/4-design-event-hub-messaging-solution
+        whiteboard: /whiteboards/06-events.png
         questions:
           - question: What is Event Hub and how does it compare to Azure Event Grid?
             links:
@@ -815,6 +818,7 @@ modules:
 
       - unit: Caching
         link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/6-design-caching-solution
+        whiteboard: /whiteboards/06-caching.png
         questions:
           - question: When would you consider to use an Azure Cache for Redis?
             links:
@@ -822,6 +826,7 @@ modules:
 
       - unit: API Management
         link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/7-design-api-integration
+        whiteboard: /whiteboards/06-api-management.png
         questions:
           - question: Why would you introduce an API management solution as implemented by APIM? What are the benefits/use case cases?
             links:
@@ -831,6 +836,7 @@ modules:
 
       - unit: Application lifecycle
         link: https://docs.microsoft.com/en-us/learn/modules/design-application-architecture/8-design-automated-app-deployment-solution
+        whiteboard: /whiteboards/06-app-lifecycle.png
         questions:
           - question: What Infrastructure as Code (IaC) technique do you use to automate the provisioning of infrastructure?
             links:

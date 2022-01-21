@@ -663,6 +663,7 @@ modules:
     units:
       - unit: Azure Data Factory
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/2-solution-azure-data-factory
+        whiteboard: /whiteboards/05-data-factory.png
         questions:
           - question: Why would you consider Azure Data Factory over SSIS (SQL Server Integration Services)?
             links:
@@ -682,6 +683,7 @@ modules:
 
       - unit: Azure Data Lake
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/3-solution-azure-data-lake
+        whiteboard: /whiteboards/05-data-lake.png
         questions:
           - question: Azure Data Lake is built on top of Azure Blob Storage. What does it add?
             link: https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction#key-features-of-data-lake-storage-gen2
@@ -703,6 +705,7 @@ modules:
 
       - unit: Azure Databricks
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/4-solution-azure-data-brick
+        whiteboard: /whiteboards/05-databricks.png
         questions:
           - question: What is Azure Databricks and what is Apache Spark?
             links:
@@ -716,6 +719,7 @@ modules:
 
       - unit: Azure Synapse Analytics
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/5-solution-azure-synapse-analytics
+        whiteboard: /whiteboards/05-synapse.png
         questions:
           - question: What is the difference between a serverless pool and a dedicated pool?
             links:
@@ -733,6 +737,7 @@ modules:
 
       - unit: Strategy for hot/warm/cold data path
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/6-design-strategy-for-hot-warm-cold-data-path
+        whiteboard: /whiteboards/05-hot-cold-warm.png
         questions:
           - question: When to use Hot/Warm/Cold data path?
             links: 
@@ -742,6 +747,7 @@ modules:
 
       - unit: Azure Stream Analytics
         link: https://docs.microsoft.com/en-us/learn/modules/design-data-integration/7-design-azure-stream-analytics-solution-for-data-analysis
+        whiteboard: /whiteboards/05-stream-analytics.png
         questions:
           - question: When would you consider to use Azure Stream Analytics? (use cases)
             links:
@@ -962,6 +968,7 @@ modules:
  
       - unit: Service principals for applications
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/9-design-service-principles
+        whiteboard: /whiteboards/07-service-principals.png
         questions:
           - question: What is a managed identity and what is it trying to solve?
             link: https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview

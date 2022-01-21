@@ -354,12 +354,16 @@ __Total number of questions:__ 333
 
 ## Azure Data Factory ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-integration/2-solution-azure-data-factory))
 
+![whiteboard](/whiteboards/05-data-factory.png)
+
 1. Why would you consider Azure Data Factory over SSIS (SQL Server Integration Services)? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/pipeline-orchestration-data-movement) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/data/enterprise-bi-adf) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/data/hybrid-etl-with-adf)
 2. What do you pay for when using Azure Data Factory? [[doc]](https://docs.microsoft.com/en-us/azure/data-factory/plan-manage-costs) [[doc]](https://docs.microsoft.com/en-us/azure/data-factory/pricing-concepts)
 3. What component of Azure Data Factory would you consider to perform data transformations? What alternatives are there? [[doc]](https://docs.microsoft.com/en-us/azure/data-factory/transform-data)
 4. What is a Self-Hosted Integration Runtime and why do you need it? [[doc]](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime#self-hosted-integration-runtime) [[doc]](https://docs.microsoft.com/en-us/azure/data-factory/create-self-hosted-integration-runtime?tabs=data-factory)
 
 ## Azure Data Lake ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-integration/3-solution-azure-data-lake))
+
+![whiteboard](/whiteboards/05-data-lake.png)
 
 1. Azure Data Lake is built on top of Azure Blob Storage. What does it add? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction#key-features-of-data-lake-storage-gen2)
 2. Why would I choose for a Data Lake, instead of regular Blob Storage? What could be my decision criteria? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-namespace) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/data-guide/scenarios/data-lake)
@@ -369,11 +373,15 @@ __Total number of questions:__ 333
 
 ## Azure Databricks ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-integration/4-solution-azure-data-brick))
 
+![whiteboard](/whiteboards/05-databricks.png)
+
 1. What is Azure Databricks and what is Apache Spark? [[doc]](https://docs.microsoft.com/en-us/azure/databricks/scenarios/what-is-azure-databricks) [[doc]](https://docs.microsoft.com/en-us/azure/databricks/getting-started/overview) [[doc]](https://docs.microsoft.com/en-us/azure/databricks/getting-started/spark/)
 2. Which role would be using Azure Databricks? [[doc]](https://docs.microsoft.com/en-us/learn/modules/describe-azure-databricks/2-explain?ns-enrollment-type=LearningPath&ns-enrollment-id=learn.wwl.perform-data-science-azure-databricks)
 3. When would you choose to implement Azure Databricks? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/example-scenario/mlops/aml-decision-tree)
 
 ## Azure Synapse Analytics ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-integration/5-solution-azure-synapse-analytics))
+
+![whiteboard](/whiteboards/05-synapse.png)
 
 1. What is the difference between a serverless pool and a dedicated pool? [[doc]](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is?context=/azure/synapse-analytics/context/context) [[doc]](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/on-demand-workspace-overview) [[doc]](https://docs.microsoft.com/en-us/azure/synapse-analytics/sql/overview-features)
 2. What do I pay for with Synapse Analytics? [[doc]](https://azure.microsoft.com/en-us/pricing/details/synapse-analytics/)
@@ -383,9 +391,13 @@ __Total number of questions:__ 333
 
 ## Strategy for hot/warm/cold data path ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-integration/6-design-strategy-for-hot-warm-cold-data-path))
 
+![whiteboard](/whiteboards/05-hot-cold-warm.png)
+
 1. When to use Hot/Warm/Cold data path? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/batch-processing) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/real-time-processing)
 
 ## Azure Stream Analytics ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-data-integration/7-design-azure-stream-analytics-solution-for-data-analysis))
+
+![whiteboard](/whiteboards/05-stream-analytics.png)
 
 1. When would you consider to use Azure Stream Analytics? (use cases) [[doc]](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-solution-patterns) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/data-guide/technology-choices/stream-processing) [[doc]](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-introduction) [[doc]](https://azure.microsoft.com/case-studies/?service=stream-analytics)
 2. What is a streaming unit (SU)? [[doc]](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-streaming-unit-consumption)
@@ -491,6 +503,8 @@ __Total number of questions:__ 333
 4. Who can conduct a review during an access review? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/manage-access-review#create-and-perform-an-access-review-for-users)
 
 ## Service principals for applications ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/9-design-service-principles))
+
+![whiteboard](/whiteboards/07-service-principals.png)
 
 1. What is a managed identity and what is it trying to solve? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
 2. What is the difference between a user assigned identity and a system managed identity? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview#managed-identity-types)

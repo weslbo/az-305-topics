@@ -1030,12 +1030,14 @@ modules:
     units:
       - unit: Azure Monitor
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/2-design-for-azure-monitor-data-sources
+        whiteboard: /whiteboards/08-azure-monitor.png
         questions:
           - question: Azure Monitor collects data automatically from a range of components. Can you share some examples/use cases?
           - question: Example - you have experienced recently an Azure Storage Account Key leakage. How can you prevent this in future?
 
       - unit: Log Analytics
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/3-design-for-log-analytics
+        whiteboard: /whiteboards/08-log-analytics.png
         questions:
           - question: How many Log Analytics resources do you need?
           - question: Would you go for a centralized or decentralized approach? Hybrid?
@@ -1049,6 +1051,7 @@ modules:
 
       - unit: Azure workbooks and Azure Insights
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/4-design-for-azure-workbooks-insights
+        whiteboard: /whiteboards/08-workbook-insights.png
         questions:
           - question: What are Azure Workbooks? 
           - question: Why would you consider to implement an Azure Workbook?
@@ -1057,6 +1060,7 @@ modules:
 
       - unit: Azure Data Explorer
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/5-design-for-azure-data-explorer
+        whiteboard: /whiteboards/08-data-explorer.png
         questions:
           - question: What is Azure Data Explorer?
           - question: What do you pay for?

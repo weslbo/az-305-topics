@@ -554,10 +554,14 @@ __Total number of questions:__ 333
 
 ## Azure Monitor ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/2-design-for-azure-monitor-data-sources))
 
+![whiteboard](/whiteboards/08-azure-monitor.png)
+
 1. Azure Monitor collects data automatically from a range of components. Can you share some examples/use cases?
 2. Example - you have experienced recently an Azure Storage Account Key leakage. How can you prevent this in future?
 
 ## Log Analytics ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/3-design-for-log-analytics))
+
+![whiteboard](/whiteboards/08-log-analytics.png)
 
 1. How many Log Analytics resources do you need?
 2. Would you go for a centralized or decentralized approach? Hybrid?
@@ -571,12 +575,16 @@ __Total number of questions:__ 333
 
 ## Azure workbooks and Azure Insights ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/4-design-for-azure-workbooks-insights))
 
+![whiteboard](/whiteboards/08-workbook-insights.png)
+
 1. What are Azure Workbooks?
 2. Why would you consider to implement an Azure Workbook?
 3. What is Azure Application Insights and what does it offer on top of Log Analytics?
 4. What can you use the monitor your Azure Kubernetes environment?
 
 ## Azure Data Explorer ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-to-log-monitor-azure-resources/5-design-for-azure-data-explorer))
+
+![whiteboard](/whiteboards/08-data-explorer.png)
 
 1. What is Azure Data Explorer?
 2. What do you pay for?

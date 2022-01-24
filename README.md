@@ -521,7 +521,7 @@ __Total number of questions:__ 333
 
 ## Access reviews ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/8-design-for-access-reviews))
 
-![whiteboard](/whiteboard/07-access-reviews.png)
+![whiteboard](/whiteboards/07-access-reviews.png)
 
 1. What is an access review and why should you use it? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/manage-access-review) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/deploy-access-reviews)
 2. What problem is it trying to solve? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview#when-should-you-use-access-reviews)

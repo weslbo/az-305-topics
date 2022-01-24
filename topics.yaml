@@ -965,7 +965,7 @@ modules:
             
       - unit: Access reviews
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/8-design-for-access-reviews
-        whiteboard: /whiteboard/07-access-reviews.png
+        whiteboard: /whiteboards/07-access-reviews.png
         questions:
           - question: What is an access review and why should you use it?
             links: 

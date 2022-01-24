@@ -864,6 +864,7 @@ modules:
     units:
       - unit: Identity and access management
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/2-design-for-identity-access-management
+        whiteboard: /whiteboards/07-identity.png
         questions:
           - question: What is the difference between AAD, AAD B2B and AAD B2C
             links:
@@ -874,6 +875,7 @@ modules:
 
       - unit: Azure Active Directory
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/3-design-for-azure-active-directory
+        whiteboard: /whiteboards/07-aad.png
         questions:
           - question: What is Azure AD Connect and what is Azure AD Connect Cloud Sync? What could be a use case to use AAD Connect cloud sync?
             links:
@@ -899,6 +901,7 @@ modules:
 
       - unit: Azure Active Directory B2B
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/4-design-business-business
+        whiteboard: /whiteboards/07-aad-b2b.png
         questions:
           - question: Why would you consider Azure AD B2B?
             link: https://docs.microsoft.com/en-us/azure/active-directory/external-identities/compare-with-b2c
@@ -921,12 +924,13 @@ modules:
 
       - unit: Azure Active Directory B2C
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/5-design-business-customer
+        whiteboard: /whiteboards/07-aad-b2c.png
         questions:
           - question: Why would you consider Azure AD B2C?
             links: 
               - https://docs.microsoft.com/en-us/azure/active-directory-b2c/overview
               - https://docs.microsoft.com/en-us/azure/active-directory/external-identities/compare-with-b2c?bc=/azure/active-directory-b2c/bread/toc.json&toc=/azure/active-directory-b2c/TOC.json#compare-external-identities-solutions
-          - question: When implementing Azure AD B2B, does your client need to have AAD as well? What identity providers are supported?
+          - question: When implementing Azure AD B2C, does your client need to have AAD as well? What identity providers are supported?
             link: https://docs.microsoft.com/en-us/azure/active-directory-b2c/technical-overview#sign-in-with-external-identity-providers
           - question: What is user flow? And can you customize the look and feel of the user interface?
             link: https://docs.microsoft.com/en-us/azure/active-directory-b2c/user-flow-overview
@@ -935,6 +939,7 @@ modules:
 
       - unit: Conditional access
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/6-design-for-conditional-access
+        whiteboard: /whiteboards/07-conditional-access.png
         questions:
           - question: What scenarios can you think of where conditional access would be beneficial?
             link: https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/plan-conditional-access
@@ -949,6 +954,7 @@ modules:
 
       - unit: Identity protection
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/7-design-for-identity-protection
+        whiteboard: /whiteboards/07-identity-protection.png
         questions:
           - question: What's the difference between sign-in risk and user risk?
             link: https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies
@@ -959,6 +965,7 @@ modules:
             
       - unit: Access reviews
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/8-design-for-access-reviews
+        whiteboard: /whiteboard/07-access-reviews.png
         questions:
           - question: What is an access review and why should you use it?
             links: 
@@ -993,6 +1000,7 @@ modules:
           
       - unit: Azure key vault
         link: https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/10-design-for-azure-key-vault
+        whiteboard: /whiteboards/07-key-vault.png
         questions:
           - question: Why use Azure Key Vault?
             link: https://docs.microsoft.com/en-us/azure/key-vault/general/overview#why-use-azure-key-vault

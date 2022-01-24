@@ -464,10 +464,14 @@ __Total number of questions:__ 333
 
 ## Identity and access management ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/2-design-for-identity-access-management))
 
+![whiteboard](/whiteboards/07-identity.png)
+
 1. What is the difference between AAD, AAD B2B and AAD B2C [[doc]](https://azure.microsoft.com/mediahandler/files/resourcefiles/cloud-identity-and-access-management/Cloud_Identity_and_Access_Management_infographic.pdf/) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/compare-with-b2c)
 2. What is AADDS? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/scenarios)
 
 ## Azure Active Directory ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/3-design-for-azure-active-directory))
+
+![whiteboard](/whiteboards/07-aad.png)
 
 1. What is Azure AD Connect and what is Azure AD Connect Cloud Sync? What could be a use case to use AAD Connect cloud sync? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-azure-ad-connect) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/cloud-sync/what-is-cloud-sync)
 2. Is Azure AD Connect one-direction-only or does it support bi-directional replication? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/authentication/tutorial-enable-sspr-writeback) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-group-writeback) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized#exchange-hybrid-writeback)
@@ -479,6 +483,8 @@ __Total number of questions:__ 333
 
 ## Azure Active Directory B2B ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/4-design-business-business))
 
+![whiteboard](/whiteboards/07-aad-b2b.png)
+
 1. Why would you consider Azure AD B2B? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/compare-with-b2c)
 2. When implementing Azure AD B2B, does your partner need to have AAD as well? What identity providers are supported? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/what-is-b2b#collaborate-with-any-partner-using-their-identities)
 3. Can you enforce MFA for guest accounts, even when they do not have this configured? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/b2b-tutorial-require-mfa)
@@ -488,12 +494,16 @@ __Total number of questions:__ 333
 
 ## Azure Active Directory B2C ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/5-design-business-customer))
 
+![whiteboard](/whiteboards/07-aad-b2c.png)
+
 1. Why would you consider Azure AD B2C? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-b2c/overview) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/external-identities/compare-with-b2c?bc=/azure/active-directory-b2c/bread/toc.json&toc=/azure/active-directory-b2c/TOC.json#compare-external-identities-solutions)
-2. When implementing Azure AD B2B, does your client need to have AAD as well? What identity providers are supported? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-b2c/technical-overview#sign-in-with-external-identity-providers)
+2. When implementing Azure AD B2C, does your client need to have AAD as well? What identity providers are supported? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-b2c/technical-overview#sign-in-with-external-identity-providers)
 3. What is user flow? And can you customize the look and feel of the user interface? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-b2c/user-flow-overview)
 4. Where should I store custom user attributes? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory-b2c/configure-user-input?pivots=b2c-user-flow)
 
 ## Conditional access ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/6-design-for-conditional-access))
+
+![whiteboard](/whiteboards/07-conditional-access.png)
 
 1. What scenarios can you think of where conditional access would be beneficial? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/conditional-access/plan-conditional-access)
 2. Why does conditional access provide more granular control over the MFA policies? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-userstates)
@@ -503,11 +513,15 @@ __Total number of questions:__ 333
 
 ## Identity protection ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/7-design-for-identity-protection))
 
+![whiteboard](/whiteboards/07-identity-protection.png)
+
 1. What's the difference between sign-in risk and user risk? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/howto-identity-protection-configure-risk-policies)
 2. What are some common examples of sign-in risk and user risk? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/identity-protection/concept-identity-protection-risks)
 3. What should you do to enable break-the-glass/emergency access account? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/roles/security-emergency-access)
 
 ## Access reviews ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/8-design-for-access-reviews))
+
+![whiteboard](/whiteboard/07-access-reviews.png)
 
 1. What is an access review and why should you use it? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/manage-access-review) [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/deploy-access-reviews)
 2. What problem is it trying to solve? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview#when-should-you-use-access-reviews)
@@ -526,6 +540,8 @@ __Total number of questions:__ 333
 6. Microsoft identity platform supports two types of permissions - delegated permissions and application permissions. What is used when? [[doc]](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#permission-types)
 
 ## Azure key vault ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-authentication-authorization-solutions/10-design-for-azure-key-vault))
+
+![whiteboard](/whiteboards/07-key-vault.png)
 
 1. Why use Azure Key Vault? [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/general/overview#why-use-azure-key-vault)
 2. How many Azure Key Vaults do you require for your applications? [[doc]](https://docs.microsoft.com/en-us/azure/key-vault/general/best-practices)

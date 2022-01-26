@@ -1071,6 +1071,7 @@ modules:
     units:
       - unit: Recommend a network architecture solution based on workload requirements
         link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/2-recommend-network-architecture-solution-based-workload-requirements
+        whiteboard: /whiteboards/09-networking.png
         questions:
           - question: Why would you want to create multiple virtual networks, or create multiple subnets in your VNET?
             links:
@@ -1091,6 +1092,7 @@ modules:
 
       - unit: Design for on-premises connectivity to Azure virtual networks
         link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/3-design-for-premises-connectivity-to-azure-virtual-networks
+        whiteboard: /whiteboards/09-hub-and-spoke.png
         questions:
           - question: Which Azure VPN Gateway SKU should you implement and why?
           - question: What is the SLA offered by VPN Gateway and what is/is not included? How can you increase the SLA?
@@ -1102,6 +1104,7 @@ modules:
 
       - unit: Design for Azure network connectivity services
         link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/4-design-for-azure-network-connectivity-services
+        whiteboard: /whiteboards/09-vnet-peering.png
         questions:
           - question: When setting up peering between 2 virtual networks, is traffic encrypted? 
           - question: What do you pay for when using VNET Peering?
@@ -1110,6 +1113,7 @@ modules:
 
       - unit: Design for application delivery services
         link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/5-design-for-application-delivery-services
+        whiteboard: /whiteboards/09-application-delivery-services.png
         questions:
           - question: Why would you consider to use an Azure CDN Content Delivery Network. What problem does it solve?
           - question: What possible sources should you consider for Azure CDN?
@@ -1118,6 +1122,7 @@ modules:
 
       - unit: Design for application protection services  
         link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/6-design-for-application-protection-services)
+        whiteboard: /whiteboards/09-application-protection-services.png
         questions:
           - question: Why would you want to go for Azure DDoS protection Standard instead of the default one?
           - question: What would you pay for when using this service?

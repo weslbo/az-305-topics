@@ -593,6 +593,8 @@ __Total number of questions:__ 333
 
 ## Recommend a network architecture solution based on workload requirements ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/2-recommend-network-architecture-solution-based-workload-requirements))
 
+![whiteboard](/whiteboards/09-networking.png)
+
 1. Why would you want to create multiple virtual networks, or create multiple subnets in your VNET? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/network-level-segmentation) [[doc]](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-vnet-plan-design-arm)
 2. Why does it matter to apply a naming convention when creating virtual networks? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming#example-names-networking)
 3. Can you deploy resources across multiple regions in the same virtual network?
@@ -605,6 +607,8 @@ __Total number of questions:__ 333
 
 ## Design for on-premises connectivity to Azure virtual networks ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/3-design-for-premises-connectivity-to-azure-virtual-networks))
 
+![whiteboard](/whiteboards/09-hub-and-spoke.png)
+
 1. Which Azure VPN Gateway SKU should you implement and why?
 2. What is the SLA offered by VPN Gateway and what is/is not included? How can you increase the SLA?
 3. Is traffic encrypted over the VPN Gateway?
@@ -615,6 +619,8 @@ __Total number of questions:__ 333
 
 ## Design for Azure network connectivity services ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/4-design-for-azure-network-connectivity-services))
 
+![whiteboard](/whiteboards/09-vnet-peering.png)
+
 1. When setting up peering between 2 virtual networks, is traffic encrypted?
 2. What do you pay for when using VNET Peering?
 3. Why would you consider implementing Virtual Network NAT (Network Address Translation)?
@@ -622,12 +628,16 @@ __Total number of questions:__ 333
 
 ## Design for application delivery services ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/5-design-for-application-delivery-services))
 
+![whiteboard](/whiteboards/09-application-delivery-services.png)
+
 1. Why would you consider to use an Azure CDN Content Delivery Network. What problem does it solve?
 2. What possible sources should you consider for Azure CDN?
 3. What would you pay for and how does it compare to other services like Azure App Service?
 4. What are the differences between Load Balancer, Traffic Manager, Application Gateway and Front Door?
 
 ## Design for application protection services ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/6-design-for-application-protection-services)))
+
+![whiteboard](/whiteboards/09-application-protection-services.png)
 
 1. Why would you want to go for Azure DDoS protection Standard instead of the default one?
 2. What would you pay for when using this service?
@@ -642,6 +652,8 @@ __Total number of questions:__ 333
 
 ## Backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/2-design-recovery))
 
+![whiteboard](/whiteboards/10-backup-and-recovery.png)
+
 1. What is the difference between RTO and RPO? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/considerations/protect) [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview) [[doc]](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics)
 2. What are SLA's and why does it matter? Who provides the SLA? [[doc]](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/manage/considerations/impact) [[doc]](https://azure.microsoft.com/en-us/support/legal/sla/)
 3. How would you calculate the SLA? [[doc]](https://docs.microsoft.com/en-us/azure/architecture/framework/resiliency/business-metrics#understand-service-level-agreements)
@@ -651,6 +663,8 @@ __Total number of questions:__ 333
 7. Why would you test your disaster recovery?
 
 ## Azure Backup ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/3-design-for-azure-backup))
+
+![whiteboard](/whiteboards/10-azure-backup.png)
 
 1. What can you backup with Azure Backup? [[doc]](https://docs.microsoft.com/en-us/azure/backup/backup-support-matrix)
 2. What do you pay for? [[doc]](https://azure.microsoft.com/en-us/pricing/details/backup/)
@@ -662,6 +676,8 @@ __Total number of questions:__ 333
 
 ## Azure blob backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/4-design-for-azure-blob-backup-recovery))
 
+![whiteboard](/whiteboards/10-blob-backup.png)
+
 1. What are the features you can use with Azure Blob storage to be able to recover data without Azure Backup? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/data-protection-overview)
 2. Can you perform a Point-in-time restore on Azure Blob storage? [[doc]](https://docs.microsoft.com/en-us/azure/storage/blobs/point-in-time-restore-overview)
 3. Can you use Azure Backup to backup Azure Blob storage? Why would you use/not use this?
@@ -670,6 +686,8 @@ __Total number of questions:__ 333
 
 ## Azure Files backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/5-design-for-azure-files-backup-recovery))
 
+![whiteboard](/whiteboards/10-azure-fileshare-backup.png)
+
 1. What are Azure Files snapshots?
 2. How would you automate file share backups?
 3. Why should you configure alerting and reporting provided by Azure Backup? [[doc]](https://docs.microsoft.com/en-us/azure/backup/monitoring-and-alerts-overview) [[doc]](https://docs.microsoft.com/en-us/azure/backup/backup-afs)
@@ -677,14 +695,20 @@ __Total number of questions:__ 333
 
 ## Azure virtual machine backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/6-design-for-azure-virtual-machine-backup-recovery))
 
+![whiteboard](/whiteboards/10-azure-vm-backup.png)
+
 1. What is the difference between snapshot tier and vault tier?
 
 ## Azure SQL backup and recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/7-design-for-azure-sql-backup-recovery))
+
+![whiteboard](/whiteboards/10-azure-sql-backup.png)
 
 1. How does Azure SQL perform backups and what's the interval, RPO and RTO? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/automated-backups-overview?tabs=single-database)
 2. What happens in case a region goes down? Can I restore to another region and who is responsible for this? [[doc]](https://docs.microsoft.com/en-us/azure/azure-sql/database/business-continuity-high-availability-disaster-recover-hadr-overview)
 
 ## Azure Site Recovery ([Unit](https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/8-design-for-azure-site-recover))
+
+![whiteboard](/whiteboards/10-site-recovery.png)
 
 1. Why would you choose Azure Site Recovery over another (3rd-party) solution?
 2. Why would you combine Azure Site Recovery with Azure Backup?

@@ -1139,6 +1139,7 @@ modules:
     units:
       - unit: Backup and recovery
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/2-design-recovery
+        whiteboard: /whiteboards/10-backup-and-recovery.png
         questions:
           - question: What is the difference between RTO and RPO?
             links:
@@ -1172,6 +1173,7 @@ modules:
 
       - unit: Azure Backup
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/3-design-for-azure-backup
+        whiteboard: /whiteboards/10-azure-backup.png
         questions:
           - question: What can you backup with Azure Backup?
             links:
@@ -1201,6 +1203,7 @@ modules:
 
       - unit: Azure blob backup and recovery
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/4-design-for-azure-blob-backup-recovery
+        whiteboard: /whiteboards/10-blob-backup.png
         questions:
           - question: What are the features you can use with Azure Blob storage to be able to recover data without Azure Backup?
             links: 
@@ -1223,6 +1226,7 @@ modules:
 
       - unit: Azure Files backup and recovery
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/5-design-for-azure-files-backup-recovery
+        whiteboard: /whiteboards/10-azure-fileshare-backup.png
         questions:
           - question: What are Azure Files snapshots?
             whiteboard: /whiteboards/10-snapshots.png
@@ -1240,11 +1244,13 @@ modules:
 
       - unit: Azure virtual machine backup and recovery
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/6-design-for-azure-virtual-machine-backup-recovery
+        whiteboard: /whiteboards/10-azure-vm-backup.png
         questions:
           - question: What is the difference between snapshot tier and vault tier?
             whiteboard: /whiteboards/10-snapshot-vault-tier.png
 
       - unit: Azure SQL backup and recovery
+        whiteboard: /whiteboards/10-azure-sql-backup.png
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/7-design-for-azure-sql-backup-recovery
         questions:
           - question: How does Azure SQL perform backups and what's the interval, RPO and RTO?
@@ -1258,6 +1264,7 @@ modules:
 
       - unit: Azure Site Recovery
         link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/8-design-for-azure-site-recover
+        whiteboard: /whiteboards/10-site-recovery.png
         questions:
           - question: Why would you choose Azure Site Recovery over another (3rd-party) solution?
             whiteboard: /whiteboards/10-site-recovery-strategy.png

@@ -21,7 +21,7 @@ namespace code
             sb.AppendLine("# AZ-305 Discussion Topics\n");
             sb.AppendLine("## Table of contents\n");
 
-            root.modules.ForEach(m => m.units.ForEach( u => i += (u.questions == null ? 0 : u.questions.Count)));
+            root.modules.ForEach(m => m.units.ForEach(u => i += (u.questions == null ? 0 : u.questions.Count)));
             sb.AppendLine($"__Total number of questions:__ {i}\n");
 
             root.modules.ForEach(m => sb.AppendLine($"- [{m.module}](#{m.module.ToLower().Replace(" ", "-")}-learn-module)"));
@@ -67,6 +67,50 @@ namespace code
             }
 
             File.WriteAllText($"../README.md", sb.ToString());
+
+            var sbsite = new StringBuilder();
+            sbsite.AppendLine("---");
+            sbsite.AppendLine("marp: true");
+            sbsite.AppendLine("---");
+            sbsite.AppendLine("");
+
+            foreach (var module in root.modules)
+            {
+
+                foreach (var unit in module.units)
+                {
+                    var j = 1;
+
+                    sbsite.AppendLine($"# {module.module} ([Learn module]({module.link}))\n");
+                    sbsite.AppendLine($"## {unit.unit} ([Unit]({unit.link}))\n");
+                    sbsite.AppendLine("");
+
+                    if (!string.IsNullOrEmpty(unit.whiteboard))
+                        sbsite.AppendLine($"![whiteboard]({unit.whiteboard})\n");
+
+                    foreach (var q in unit.questions)
+                    {
+                        sbsite.Append($"{j++}. {q.question}");
+
+                        if (q.links != null)
+                            q.links.ForEach(link => sbsite.Append($" [[doc]]({link})"));
+
+                        if (!string.IsNullOrEmpty(q.link))
+                            sbsite.Append($" [[doc]]({q.link})");
+
+                        sbsite.Append("\n");
+
+                        if (q.extra != null)
+                            q.extra.ForEach(e => sbsite.AppendLine($"    - {e}"));
+                    }
+
+                    sbsite.AppendLine("---");
+                    sbsite.AppendLine("");
+
+                }
+            }
+
+            File.WriteAllText($"../web/index.md", sbsite.ToString());
 
             Console.WriteLine("Finished");
         }

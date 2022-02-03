@@ -93,7 +93,7 @@ modules:
             whiteboard: /whiteboards/01-subscription-limits.png
             extra:
                 - Could be a reason to go for multiple subscription. Do you know which limits exists at the level of a subscription?
-          - question: I need to deploy 30,000 VMs. How many subscriptions do I need?
+          - question: I need to deploy 30000 VMs. How many subscriptions do I need?
             extra:
                 - Can you find the answer in the docs?
                 - What would be your advice?
@@ -1081,11 +1081,17 @@ modules:
             links:
                 - https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming#example-names-networking
           - question: Can you deploy resources across multiple regions in the same virtual network?
+            link: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq#can-a-vnet-span-regions
           - question: How large should your virtual network's address space be? 
+            link: https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/migrate/azure-best-practices/migrate-best-practices-networking#best-practice-plan-ip-addressing
             extra:
                 - Why is important that virtual network address ranges do not overlap?
           - question: What is the difference between a network virtual appliance (NVA) like a Firewall and a NSG Network Security Group?
+            links:
+              - https://docs.microsoft.com/en-us/azure/firewall/firewall-faq#what-is-the-difference-between-network-security-groups--nsgs--and-azure-firewall
+              - https://docs.microsoft.com/en-us/azure/security/fundamentals/network-overview
           - question: What is a hub and spoke topology and why would you consider it? What are the benefits/disadvantages?
+            link: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke?tabs=cli
             extra:
             - What resources should become part of your hub, and what would you deploy into your spokes?
             - Should you allow spokes to communicate with each other directly? Why?
@@ -1095,44 +1101,70 @@ modules:
         whiteboard: /whiteboards/09-hub-and-spoke.png
         questions:
           - question: Which Azure VPN Gateway SKU should you implement and why?
+            link: https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/
           - question: What is the SLA offered by VPN Gateway and what is/is not included? How can you increase the SLA?
+            link: https://azure.microsoft.com/en-us/support/legal/sla/vpn-gateway/
           - question: Is traffic encrypted over the VPN Gateway?
+            link: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-compliance-crypto
           - question: What can you do to troubleshoot your VPN connection? 
+            link: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-troubleshoot
           - question: Why would you consider an Express Route?
+            link: https://docs.microsoft.com/en-ca/azure/expressroute/expressroute-introduction
           - question: Can you use an Express route and combine it with a VPN Gateway? Why would you do this?
+            link: https://docs.microsoft.com/en-ca/azure/expressroute/use-s2s-vpn-as-backup-for-expressroute-privatepeering
           - question: What advantage brings Azure Virtual WAN to the table?
+            links: 
+              - https://docs.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about
+              - https://docs.microsoft.com/en-us/azure/architecture/networking/hub-spoke-vwan-architecture
 
       - unit: Design for Azure network connectivity services
         link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/4-design-for-azure-network-connectivity-services
         whiteboard: /whiteboards/09-vnet-peering.png
         questions:
           - question: When setting up peering between 2 virtual networks, is traffic encrypted? 
+            links:
+              - https://azure.microsoft.com/en-us/blog/vnet-peering-and-vpn-gateways/
+              - https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-faq#is-vnet-peering-traffic-encrypted
           - question: What do you pay for when using VNET Peering?
+            link: https://azure.microsoft.com/en-us/pricing/details/virtual-network/
           - question: Why would you consider implementing Virtual Network NAT (Network Address Translation)?
+            link: https://docs.microsoft.com/en-us/azure/virtual-network/nat-gateway/nat-overview
           - question: Why would you consider overriding Azure's default routing? How do you accomplish this?
+            link: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview
 
       - unit: Design for application delivery services
         link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/5-design-for-application-delivery-services
         whiteboard: /whiteboards/09-application-delivery-services.png
         questions:
           - question: Why would you consider to use an Azure CDN Content Delivery Network. What problem does it solve?
+            link: https://docs.microsoft.com/en-us/azure/cdn/cdn-features
           - question: What possible sources should you consider for Azure CDN?
-          - question: What would you pay for and how does it compare to other services like Azure App Service?
+            link: https://docs.microsoft.com/en-us/azure/cdn/cdn-create-endpoint-how-to
           - question: What are the differences between Load Balancer, Traffic Manager, Application Gateway and Front Door?
+            links:
+              - https://docs.microsoft.com/en-us/azure/architecture/guide/technology-choices/load-balancing-overview
+              - https://docs.microsoft.com/en-us/azure/frontdoor/front-door-lb-with-azure-app-delivery-suite
 
       - unit: Design for application protection services  
         link: https://docs.microsoft.com/en-us/learn/modules/design-network-solutions/6-design-for-application-protection-services)
         whiteboard: /whiteboards/09-application-protection-services.png
         questions:
           - question: Why would you want to go for Azure DDoS protection Standard instead of the default one?
+            link: https://docs.microsoft.com/en-us/azure/ddos-protection/ddos-protection-standard-features
           - question: What would you pay for when using this service?
+            link: https://azure.microsoft.com/en-us/pricing/details/ddos-protection/
           - question: What problem is it that Azure Private Link is trying to solve?
-          - question: Should you consider Azure Firewall or go for any other 3rd party firewall technology?
+            link: https://docs.microsoft.com/en-us/azure/private-link/private-link-overview#key-benefits
           - question: What are the advantages and disadvantages of setting up Service Endpoints?
+            link: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-service-endpoints-overview
           - question: What's the difference between Network Security Groups and Application Security Groups
+            link: https://docs.microsoft.com/en-us/azure/virtual-network/application-security-groups
           - question: What problem is it that Azure Bastion solves?
+            link: https://docs.microsoft.com/en-us/azure/bastion/bastion-overview
           - question: How can you implement Just in Time Access?
-
+            links: 
+              - https://docs.microsoft.com/en-us/azure/defender-for-cloud/just-in-time-access-usage
+              - https://docs.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-configure
 
   - module: 10 - Design a business continuity solution
     link: https://docs.microsoft.com/en-us/learn/modules/design-solution-for-backup-disaster-recovery/
@@ -1230,7 +1262,9 @@ modules:
         questions:
           - question: What are Azure Files snapshots?
             whiteboard: /whiteboards/10-snapshots.png
+            link: https://docs.microsoft.com/en-us/azure/storage/files/storage-snapshots-files
           - question: How would you automate file share backups?
+            link: https://docs.microsoft.com/en-us/azure/backup/azure-file-share-backup-overview
             whiteboard: /whiteboards/10-file-share-automated.png
           - question: Why should you configure alerting and reporting provided by Azure Backup?
             links:
@@ -1247,6 +1281,7 @@ modules:
         whiteboard: /whiteboards/10-azure-vm-backup.png
         questions:
           - question: What is the difference between snapshot tier and vault tier?
+            link: https://docs.microsoft.com/en-us/azure/backup/about-azure-vm-restore
             whiteboard: /whiteboards/10-snapshot-vault-tier.png
 
       - unit: Azure SQL backup and recovery

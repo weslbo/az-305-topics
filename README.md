@@ -765,3 +765,4 @@ __Total number of questions:__ 331
 2. When would you use Data Box? [[doc]](https://learn.microsoft.com/azure/databox/data-box-overview)
 3. What other tools can you use to import/export moderate volumes of data? [[doc]](https://learn.microsoft.com/azure/storage/common/storage-use-azcopy-v10)
 
+![pixel](https://api.segment.io/v1/pixel/track?data=ewogICJ3cml0ZUtleSI6ICJJRmZFZEZ6cWNDQzdYTlBDYlp0SGRWamxvSVNqM0xxRyIKfQ==)
